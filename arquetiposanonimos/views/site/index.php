@@ -108,10 +108,8 @@
                         <h4 class="text-uppercase m-0">Grupos</h4>
                         <hr class="my-4 mx-auto" />
                         <div class="small text-black-50">
-                            <p><a href="https://chat.whatsapp.com/IX0Vbu0eoEu03bRHAkAwDR" target="_blank">Grupo Arquitetos Tipológicos</a></p>
                             <p><a href="https://chat.whatsapp.com/Fx8yAbBQ8JtEqrg3wUb7Jq" target="_blank">Grupo principal A.A</a></p>
-                            <p><a href="https://drive.google.com/drive/folders/1-HSGRwpwUP5HtukVGuB7tUNUVVXQUWC9" target="_blank">Drive de Materiais</a></p>
-                            <p><a href="https://meet.google.com/bob-ijxu-kpv" target="_blank">Reunião A.A - Sábado às 20h30</a></p>
+                            <p><a href="https://chat.whatsapp.com/IX0Vbu0eoEu03bRHAkAwDR" target="_blank">Grupo Arquitetos Tipológicos</a></p>
                         </div>
                     </div>
                 </div>
