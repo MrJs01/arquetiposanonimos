@@ -16,7 +16,7 @@ $files = array_splice($files, 2);
         <div class="swiper-wrapper">
             <?php foreach ($files as $file): ?>
                 <div class="swiper-slide">
-                    <img src="/file_contents/boas-vindas/comece-aqui/<?= $file ?>" alt="<?= $file ?>">
+                    <img src="/file_contents/boas-vindas/comece-aqui/<?= $file ?>" alt="<?= $file ?>" style="object-fit: contain;">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -34,7 +34,6 @@ $files = array_splice($files, 2);
     .swiper-slide img {
         width: 100%; /* Garantir que as imagens ocupem toda a largura */
         height: 100%; /* Garantir que as imagens ocupem toda a altura */
-        object-fit: cover; /* Ajuste para que a imagem cubra todo o slide sem distorção */
     }
 
     .container-fluid {
