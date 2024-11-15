@@ -203,7 +203,7 @@ $films = \app\models\Films::find()->all();
         currentHighlight = (currentHighlight + 1) % destaques.length;
     }
 
-    setInterval(updateHighlight, 3000); // Troca a cada 3 segundos
+    setInterval(updateHighlight, 5000); // Troca a cada 3 segundos
     updateHighlight()
     // Configuração do Swiper para cada carrossel menor
 </script>
