@@ -111,13 +111,21 @@ class SiteController extends Controller
                 }
             }
 
-            // Processa as imagens
+            // Verifica e processa a imagem principal
             $imageInput = UploadedFile::getInstance($model, 'imgInput');
             $filesInput = UploadedFile::getInstances($model, 'filesInput');
 
-            // Salva as imagens
+            // Salva as imagens (se novas forem carregadas)
             if ($imageInput || $filesInput) {
-                $model->saveFiles($imageInput, $filesInput);
+                // Se uma imagem principal foi carregada, salvá-la
+                if ($imageInput) {
+                    $model->saveMainImage($imageInput);
+                }
+
+                // Salva os arquivos adicionais
+                if ($filesInput) {
+                    $model->saveAdditionalFiles($filesInput);
+                }
             }
 
             // Tenta salvar o modelo
