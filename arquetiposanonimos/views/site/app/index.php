@@ -155,11 +155,8 @@
     }
 
     // colocar todos os scrolls para esquerda
-    document.querySelectorAll('.aror').forEach(aror => {
-        aror.addEventListener('click', () => {
-            aror.parentNode.scrollLeft = 0;
-        });
+    document.querySelectorAll('.div-width').forEach(div => {
+        div.scrollLeft = 0;
     });
-
     
 </script>
