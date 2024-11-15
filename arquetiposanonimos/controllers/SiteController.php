@@ -96,34 +96,12 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
 
             // files imageInput e filesInput
-            $imageInput = UploadedFile::getInstance($model, 'files');
-            $filesInput = UploadedFile::getInstances($model, 'filesInput');
+            $imageInput = $_FILES['imageInput'];
+            $filesInput = $_FILES['filesInput'];
 
-            // Define o diretório onde as imagens serão armazenadas
-            $uploadPath = Yii::getAlias('@webroot/uploads/films/');
+            // salvar os arquivos
+            $model->saveFiles($imageInput, $filesInput);
 
-            // Verifica se foi enviado uma imagem principal
-            if ($imageInput) {
-                $imageName = $imageInput->baseName . '.' . $imageInput->extension;
-                // Salva a imagem principal
-                if ($imageInput->saveAs($uploadPath . $imageName)) {
-                    $model->img = $imageName;
-                }
-            }
-
-            // Verifica se foram enviados arquivos de imagem
-            if ($filesInput) {
-                $model->files = [];
-                foreach ($filesInput as $file) {
-                    $fileName = $file->baseName . '.' . $file->extension;
-                    // Salva as imagens adicionais
-                    if ($file->saveAs($uploadPath . $fileName)) {
-                        $model->files[] = $fileName;
-                    }
-                }
-            }
-
-            // Tenta salvar o modelo no banco de dados
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);

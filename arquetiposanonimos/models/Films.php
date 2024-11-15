@@ -43,9 +43,7 @@ class Films extends \yii\db\ActiveRecord
             [['views'], 'integer'],
             [['files', 'img'], 'string'],
 
-            [['imageInput'], 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
-            [['filesInput'], 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true, 'maxFiles' => 10],
-       
+            
 
         ];
     }
@@ -67,5 +65,26 @@ class Films extends \yii\db\ActiveRecord
             'views' => 'Views',
             'img' => 'Image (main)',
         ];
+    }
+
+
+    public function saveFiles($imageInput, $filesInput)
+    {
+        // salvar em /web/uploads
+        if ($imageInput) {
+            $image = UploadedFile::getInstance($this, 'imgInput');
+            if ($image) {
+                $image->saveAs('uploads/' . $image->baseName . '.' . $image->extension);
+                $this->img = $image->baseName . '.' . $image->extension;
+            }
+        }
+
+        if ($filesInput) {
+            $files = UploadedFile::getInstances($this, 'filesInput');
+            foreach ($files as $file) {
+                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+                $this->files .= $file->baseName . '.' . $file->extension . ',';
+            }
+        }
     }
 }
