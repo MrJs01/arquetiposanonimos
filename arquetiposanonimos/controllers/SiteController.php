@@ -95,9 +95,7 @@ class SiteController extends Controller
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
 
-            if ($model->isNewRecord) {
-                $model->created_at = date('Y-m-d H:i:s');
-            }
+     
 
             // verificar img principal
             $model->img = UploadedFile::getInstance($model, 'imgInput');
