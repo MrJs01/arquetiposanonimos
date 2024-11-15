@@ -1,5 +1,5 @@
 <!-- swiper slide -->
-<div class="container-fluid p-0">
+<div class="p-0">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
