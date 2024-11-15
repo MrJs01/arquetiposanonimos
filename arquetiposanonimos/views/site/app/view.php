@@ -2,6 +2,8 @@
 
 // pegar imagens do arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/0001.jpg, 0022.jpg, 0033.jpg
 
+echo $file_contents;
+
 $dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
 $files = scandir($dir);
 $files = array_splice($files, 2);
