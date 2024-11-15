@@ -80,7 +80,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     </div>
 
     <footer class="text-center mt-5 py-4">
-        <p>&copy; <?= date('Y') ?> Netflix Clone. All rights reserved.</p>
+        <p>&copy; <?= date('Y') ?> @Arquetipos Anónimos by <a href="https://crom.live">Crom</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
