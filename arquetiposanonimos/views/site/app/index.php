@@ -142,10 +142,43 @@
 
 <!-- Scripts -->
 <script>
-    // Função para navegação do carrossel
+    // Função para navegação suave do carrossel
     function scrollCarrousel(divId, scrollAmount) {
         const div = document.getElementById(divId);
-        div.scrollLeft += scrollAmount;
+
+        // Armazenar a posição inicial
+        const start = div.scrollLeft;
+
+        // Posição final após o scroll
+        const end = start + scrollAmount;
+
+        // Duração da animação (em milissegundos)
+        const duration = 500; // 500ms (0.5 segundos)
+
+        let startTime = null;
+
+        // Função para animar o scroll
+        function animateScroll(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const progress = currentTime - startTime;
+            const position = easeInOutQuad(progress, start, end - start, duration);
+
+            div.scrollLeft = position;
+
+            if (progress < duration) {
+                requestAnimationFrame(animateScroll); // Continuar a animação até completar a duração
+            }
+        }
+
+        // Função de easing (movimento suave)
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animateScroll); // Iniciar a animação
     }
 
     // colocar todos os scrolls para esquerda
