@@ -1,4 +1,5 @@
 <?php
+
 namespace app\models;
 
 use Yii;
@@ -37,13 +38,21 @@ class Films extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'description', 'files', 'slug', 'views', 'img'], 'required'],
+            [['title', 'description', 'slug', 'views'], 'required'],
             [['title', 'description', 'files', 'slug', 'img'], 'string'],
             [['views'], 'integer'],
             [['filesInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, gif', 'maxFiles' => 10],
             [['imgInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
+            // Torna os campos de arquivos não obrigatórios, mas validando se houver arquivo
+            [['files'], 'required', 'when' => function ($model) {
+                return !empty($model->filesInput);
+            }, 'message' => 'Files cannot be blank.'],
+            [['img'], 'required', 'when' => function ($model) {
+                return !empty($model->imgInput);
+            }, 'message' => 'Image (main) cannot be blank.'],
         ];
     }
+
 
     /**
      * Salva os arquivos de imagem enviados.

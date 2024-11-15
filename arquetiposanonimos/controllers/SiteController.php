@@ -159,9 +159,14 @@ class SiteController extends Controller
             $model->filesInput = UploadedFile::getInstances($model, 'filesInput');
             $model->imgInput = UploadedFile::getInstance($model, 'imgInput');
 
-            if ($model->uploadFiles() && $model->save()) {
-                Yii::$app->session->setFlash('success', 'Film saved successfully!');
-                return $this->redirect(['app/admin/film', 'id' => $model->id]);
+            // Verifica se a validação foi bem-sucedida
+            if ($model->uploadFiles() && $model->validate()) {
+                if ($model->save()) {
+                    Yii::$app->session->setFlash('success', 'Film saved successfully!');
+                    return $this->redirect(['app/admin/film', 'id' => $model->id]);
+                } else {
+                    Yii::$app->session->setFlash('error', 'There was an error saving the film.');
+                }
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error saving the film. Errors: ' . json_encode($model->getErrors()));
             }
