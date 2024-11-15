@@ -173,6 +173,10 @@ $comece_aqui = [
             // Ajuste adicional para o alinhamento correto
             centeredSlides: true, // Centraliza os slides se necessário
         });
+
+        // primeir oslide 
+        swiper_destaques.slideTo(0);
+        
     </script>
 
 </div>
