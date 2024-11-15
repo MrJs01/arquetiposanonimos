@@ -18,6 +18,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '/assets_main/img/logo.png']);
+$this->title = 'Tipologias Psicológicas';
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

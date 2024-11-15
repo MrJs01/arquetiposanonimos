@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'Netflix Clone';
+$this->title = 'Tipologias Psicológicas';
 ?>
 
 <!-- Estilos adicionais para personalizar o layout -->
