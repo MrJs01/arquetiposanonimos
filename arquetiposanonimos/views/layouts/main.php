@@ -73,7 +73,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= Alert::widget() ?>
     <?= $content ?>
 
-    <footer class="footer bg-black small text-center text-white-50">
+    <footer class="footer bg-black small text-center text-white-50 position-absolute bottom-0 start-0 w-100">
         <div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div>
     </footer>
     <!-- Bootstrap core JS-->

@@ -72,7 +72,7 @@
 <!-- Contato -->
 <section class="contact-section bg-black">
     <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
+        <div class="row gx-4 gx-lg-5 w-100 justify-content-center">
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
