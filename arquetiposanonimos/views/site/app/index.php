@@ -5,7 +5,7 @@
 $this->title = 'Netflix Clone';
 ?>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-5 overflow-scroll">
     <div class="col">
         <div class="card h-100">
             <img src="https://placehold.co/300x400" class="card-img-top" alt="The Mother">
