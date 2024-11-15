@@ -163,8 +163,8 @@ $comece_aqui = [
             spaceBetween: 20,
             loop: true,
             navigation: {
-                nextEl: $("#swiper-destaques").querySelector('.swiper-button-next'),
-                prevEl: $("#swiper-destaques").querySelector('.swiper-button-prev'),
+                nextEl: $("#swiper-destaques").find(".swiper-button-next")[0],
+                prevEl: $("#swiper-destaques").find(".swiper-button-prev")[0],
             },
        
         });
