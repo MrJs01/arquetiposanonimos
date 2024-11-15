@@ -62,13 +62,11 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     <nav class="navbar  navbar-dark p-3 d-flex justify-content-between">
         <a class="navbar-brand" href="/app">Arquetipos Anónimos</a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/">Site</a></li>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Site</a></li>
 
-            </ul>
-        </div>
+        </ul>
     </nav>
 
     <div class="container-fluid mt-4">
