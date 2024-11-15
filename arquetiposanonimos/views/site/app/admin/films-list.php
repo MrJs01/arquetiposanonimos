@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Films', ['create'], ['class' => 'btn btn-success']) ?>
+        <a href="/app/admin/film" class="btn btn-primary">Create Film</a>
     </p>
 
     <!-- mostrar lista de filmes e button editar -->
