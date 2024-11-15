@@ -70,7 +70,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= Alert::widget() ?>
     <?= $content ?>
 
-    
+
 
     <?php $this->endBody() ?>
 </body>
@@ -80,7 +80,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 
 
-</body>
 
 </html>
 <?php $this->endPage() ?>
