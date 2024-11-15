@@ -52,11 +52,9 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <body>
     <?php $this->beginBody() ?>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/app">Netflix Clone</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 d-flex justify-content-between">
+        <a class="navbar-brand" href="/app">Arquetipos Anónimos</a>
+      
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
