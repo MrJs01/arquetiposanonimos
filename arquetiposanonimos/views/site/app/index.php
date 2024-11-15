@@ -111,7 +111,7 @@ $this->title = 'Netflix Clone';
             ?>
                 <div class="swiper-slide">
                     <div class="card" onclick="location.href='/filme.php?id=<?= $j ?>'">
-                        <img src="https://placehold.co/300x400" class="card-img-top" alt="Filme">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Filme">
                         <div class="card-body">
                             <h5 class="card-title">Título do Filme <?= $j + 1 ?></h5>
                             <p class="card-text">Descrição curta do filme ou série.</p>
