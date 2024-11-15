@@ -92,17 +92,26 @@ class SiteController extends Controller
     {
         $this->layout = 'main-app';
         $model = $id ? Films::findOne($id) : new Films();
-
+    
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
-
-            // files imageInput e filesInput
+    
+            // Recupera a nova ordem das imagens
+            $imageOrder = Yii::$app->request->post('image_order', []);
+            
+            // Processar os arquivos
             $imageInput = $_FILES['imageInput'];
             $filesInput = $_FILES['filesInput'];
-
-            // salvar os arquivos
+    
+            // Salvar as novas imagens
             $model->saveFiles($imageInput, $filesInput);
-
+            
+            // Atualizar a ordem das imagens
+            if (!empty($imageOrder)) {
+                // Exemplo de como reorganizar as imagens
+                $model->updateImageOrder($imageOrder);
+            }
+    
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
@@ -110,9 +119,10 @@ class SiteController extends Controller
                 Yii::$app->session->setFlash('error', 'There was an error saving the film. Erros: ' . json_encode($model->errors));
             }
         }
-
+    
         return $this->render('app/admin/film', [
             'model' => $model,
         ]);
     }
+    
 }

@@ -107,4 +107,15 @@ class Films extends \yii\db\ActiveRecord
             return false;
         }
     }
+
+    public function updateImageOrder($imageOrder)
+    {
+        foreach ($imageOrder as $index => $imageId) {
+            $image = Image::findOne($imageId);
+            if ($image) {
+                $image->order = $index + 1; // Defina a ordem
+                $image->save();
+            }
+        }
+    }
 }
