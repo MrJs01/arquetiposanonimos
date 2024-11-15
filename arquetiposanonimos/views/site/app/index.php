@@ -12,10 +12,8 @@ $this->title = 'Netflix Clone';
         color: #ffffff;
         transition: all 0.5s;
 
-        background-color: #000000;
-        opacity: 1;
-        background-size: 16px 28px;
-        background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
+        /* background gradient blue top black bottom */
+        background: linear-gradient(to bottom, #141414, #000000);
 
     }
 
@@ -204,17 +202,7 @@ $this->title = 'Netflix Clone';
         document.getElementById("highlight-title").textContent = highlight.title;
         document.getElementById("highlight-description").textContent = highlight.description;
 
-        // Define o gradiente de fundo com a cor personalizada
-        const bgColor = highlight.bgColor;
-        const gradient = `
-        linear-gradient(30deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
-        linear-gradient(150deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
-        linear-gradient(30deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
-        linear-gradient(150deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
-        linear-gradient(60deg, ${bgColor}77 25%, transparent 25.5%, transparent 75%, ${bgColor}77 75%, ${bgColor}77),
-        linear-gradient(60deg, ${bgColor}77 25%, transparent 25.5%, transparent 75%, ${bgColor}77 75%, ${bgColor}77)
-    `;
-        document.body.style.backgroundImage = gradient;
+   
 
         // Atualiza o índice para o próximo destaque
         currentHighlight = (currentHighlight + 1) % destaques.length;
