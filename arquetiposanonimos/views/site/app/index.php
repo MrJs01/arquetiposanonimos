@@ -14,7 +14,6 @@ $this->title = 'Netflix Clone';
 
         background-color: #000000;
         opacity: 1;
-        background-image: linear-gradient(30deg, #4b1e1e 12%, transparent 12.5%, transparent 87%, #4b1e1e 87.5%, #4b1e1e), linear-gradient(150deg, #4b1e1e 12%, transparent 12.5%, transparent 87%, #4b1e1e 87.5%, #4b1e1e), linear-gradient(30deg, #4b1e1e 12%, transparent 12.5%, transparent 87%, #4b1e1e 87.5%, #4b1e1e), linear-gradient(150deg, #4b1e1e 12%, transparent 12.5%, transparent 87%, #4b1e1e 87.5%, #4b1e1e), linear-gradient(60deg, #4b1e1e77 25%, transparent 25.5%, transparent 75%, #4b1e1e77 75%, #4b1e1e77), linear-gradient(60deg, #4b1e1e77 25%, transparent 25.5%, transparent 75%, #4b1e1e77 75%, #4b1e1e77);
         background-size: 16px 28px;
         background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
 
