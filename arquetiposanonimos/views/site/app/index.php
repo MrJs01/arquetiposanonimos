@@ -144,7 +144,7 @@
 <section class="all-drama">
     <div class="tv-dramas" id="dramas">
         <h2 class="tvd-h2">Tv Dramas</h2>
-        <div class="div-width">
+        <div class="div-width" id="div1-width">
             <div class="all-movie-div">
                 <div class="orange">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="orange image">
@@ -171,14 +171,15 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <!-- scroll div1-width -->
+        <a class="prev" onclick="document.getElementById('div1-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div1-width').scrollLeft += 300">&#10095;</a>
     </div>
     <!-- trending now -->
     <div class="trending-now">
         <h2 class="all-tvd-h2">Trending now</h2>
         <div class="second-div-width">
-            <div class="second-all-movie-div">
+            <div class="second-all-movie-div" id="div2-width">
                 <div class="control-z">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/controlz.jpg?raw=true" alt="contro z">
                 </div>
@@ -204,14 +205,14 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <a class="prev" onclick="document.getElementById('div2-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div2-width').scrollLeft += 300">&#10095;</a>
     </div>
     <!-- my list -->
     <div class="my-list" id="list">
         <h2 class="h2list">My List</h2>
         <div class="list-div-width">
-            <div class="second-div-list">
+            <div class="second-div-list" id="div3-width">
                 <div class="nevertheless-list">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/nevertheless.jpg?raw=true" alt="">
                 </div>
@@ -240,14 +241,14 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <a class="prev" onclick="document.getElementById('div3-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div3-width').scrollLeft += 300">&#10095;</a>
     </div>
     <!-- only on netflix -->
     <div class="only-on-netflix">
         <h2 class="tvtvd-h2">Only On Netflix</h2>
         <div class="netflix-div-width">
-            <div class="netflix-all-movie-div">
+            <div class="netflix-all-movie-div" id="div4-width">
                 <div class="nevertheless-list">
                     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/never-big-img.webp" alt="">
                 </div>
@@ -284,10 +285,14 @@
             </div>
         </div>
     </div>
+    <div class="aror">
+        <a class="prev" onclick="document.getElementById('div4-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div4-width').scrollLeft += 300">&#10095;</a>
+    </div>
     <div class="top10-now" id="top-tv">
         <h2 class="top10-tvd-h2">Top 10 In Nigeria</h2>
         <div class="top10-div-width">
-            <div class="top10-all-movie-div">
+            <div class="top10-all-movie-div" id="div5-width">
                 <div class="quams-money">
                     <div class="topp-one"></div>
                     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/quans%20money.webp" alt="quams money">
@@ -320,14 +325,14 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <a class="prev" onclick="document.getElementById('div5-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div5-width').scrollLeft += 300">&#10095;</a>
     </div>
     <!-- women behind the screen -->
     <div class="my-list div-list">
         <h2 class="h2list" style="position:relative; top:60px">Women behind the screen</h2> <a class="sec-next">&#10095;</a>
         <div class="list-div-width">
-            <div class="second-div-list">
+            <div class="second-div-list" id="div3-width">
                 <div class="nevertheless-list">
                     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/intern.webp" alt="">
                 </div>
@@ -353,8 +358,8 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <a class="prev" onclick="document.getElementById('div3-width').scrollLeft -= 300">&#10094;</a>
+        <a class="next" onclick="document.getElementById('div3-width').scrollLeft += 300">&#10095;</a>
     </div>
 
     <footer>
