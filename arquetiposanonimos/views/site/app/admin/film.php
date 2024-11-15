@@ -1,4 +1,5 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -52,6 +53,7 @@ $this->title = $model->isNewRecord ? 'Create Film' : 'Edit Film';
 
 <script>
     // Inicializa o Sortable no container das imagens
+    // Inicializa o Sortable no container das imagens
     var sortable = new Sortable(document.getElementById('sortable-images'), {
         animation: 150,
         onEnd(evt) {
@@ -61,13 +63,15 @@ $this->title = $model->isNewRecord ? 'Create Film' : 'Edit Film';
             for (let i = 0; i < items.length; i++) {
                 newOrder.push(items[i].getAttribute('data-id')); // Pega o ID da imagem
             }
+            console.log('Nova ordem das imagens:', newOrder); // Verifique a ordem aqui
             document.getElementById('newOrder').value = newOrder.join(',');
         }
     });
 
+
     // Funcionalidade para excluir uma imagem
-    document.querySelectorAll('.delete-image').forEach(function (button) {
-        button.addEventListener('click', function () {
+    document.querySelectorAll('.delete-image').forEach(function(button) {
+        button.addEventListener('click', function() {
             var imageId = this.getAttribute('data-id');
             // Adiciona o id da imagem excluída ao campo de imagens excluídas
             let deletedImages = document.getElementById('deletedImages').value.split(',');
