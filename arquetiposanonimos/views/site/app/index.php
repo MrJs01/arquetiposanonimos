@@ -1,53 +1,53 @@
-
+<!-- User Image -->
 <div class="user-img" style="float: right;">
     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/user.png?raw=true" alt="">
     <span class="span-icon"></span>
 </div>
 
-<!-- image and logo -->
+<!-- Image and Logo -->
 <div class="between-img-div">
     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/between-1.webp" class="between-img" alt="">
 </div>
+
 <div class="logo-and-text">
-    <div class="titleWrapper" style="transform-origin: left bottom; transform: scale(1) translate3d(0px, 0px, 0px); transition-duration: 1300ms; transition-delay: 0ms;">
+    <div class="titleWrapper">
         <div class="billboard-title">
             <img class="title-logo" src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/netflixsvg.webp" title="Between" alt="Between">
         </div>
     </div>
-    <div class="info-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 1300ms; transition-delay: 0ms; opacity: 1;">
-        <div class="info-wrapper-fade" style="opacity: 1; transition-duration: 600ms; transition-delay: 200ms;">
-            <div class="series-synopsis">After a mysterious disease kills every resident over 21 years old,<br> survivors of a town must fend for<br> themselves when the government quarantines them.</div>
+    <div class="info-wrapper">
+        <div class="info-wrapper-fade">
+            <div class="series-synopsis">
+                After a mysterious disease kills every resident over 21 years old,<br> survivors of a town must fend for themselves when the government quarantines them.
+            </div>
         </div>
-        <button class="color-primary" tabindex="-1" type="button">
-            <div class="ltr-1ksxkn9">
-                <div class="medium ltr-dguo2f" role="presentation">
-                    <svg class="svg-radius" viewBox="0 0 24 24">
-                        <path d="M6 4l15 8-15 8z" fill="currentColor"></path>
-                    </svg>
-                </div>
+        <button class="color-primary" type="button">
+            <div class="medium ltr-dguo2f" role="presentation">
+                <svg class="svg-radius" viewBox="0 0 24 24">
+                    <path d="M6 4l15 8-15 8z" fill="currentColor"></path>
+                </svg>
             </div>
             <div class="just-div" style="width:1rem"></div>
             <span class="info-btn">Play</span>
-        </button></a>
+        </button>
         <button class="button-secondary" type="button">
-            <div class="ltr">
-                <div class="medium"><svg class="svg-radius" viewBox="0 0 24 24">
-                        <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-2 0a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8zm-9 6v-7h2v7h-2zm1-8.75a1.21 1.21 0 0 1-.877-.364A1.188 1.188 0 0 1 10.75 8c0-.348.123-.644.372-.886.247-.242.54-.364.878-.364.337 0 .63.122.877.364.248.242.373.538.373.886s-.124.644-.373.886A1.21 1.21 0 0 1 12 9.25z" fill="currentColor">
-                        </path>
-                    </svg></div>
+            <div class="medium">
+                <svg class="svg-radius" viewBox="0 0 24 24">
+                    <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-2 0a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8zm-9 6v-7h2v7h-2zm1-8.75a1.21 1.21 0 0 1-.877-.364A1.188 1.188 0 0 1 10.75 8c0-.348.123-.644.372-.886.247-.242.54-.364.878-.364.337 0 .63.122.877.364.248.242.373.538.373.886s-.124.644-.373.886A1.21 1.21 0 0 1 12 9.25z" fill="currentColor"></path>
+                </svg>
             </div>
             <div class="more-info" style="width:1rem"></div>
             <span class="info-btn">More Info</span>
         </button>
     </div>
 </div>
-<!-- rating -->
+
+<!-- Rating -->
 <div class="ratin-div" style="float: right;">
     <button aria-label="Replay" class="color-supplementary" type="button">
         <div class="small-div">
             <svg class="style-svg" viewBox="0 0 24 24">
-                <path d="M20 12.35l1.919-1.371 1.162 1.627-4.08 2.915-4.082-2.915 1.162-1.627L18 12.349V12c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.93 0 3.68-.79 4.94-2.06l1.42 1.42A8.954 8.954 0 0 1 11 21a9 9 0 1 1 9-9v.35z" fill="currentColor">
-                </path>
+                <path d="M20 12.35l1.919-1.371 1.162 1.627-4.08 2.915-4.082-2.915 1.162-1.627L18 12.349V12c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.93 0 3.68-.79 4.94-2.06l1.42 1.42A8.954 8.954 0 0 1 11 21a9 9 0 1 1 9-9v.35z" fill="currentColor"></path>
             </svg>
         </div>
     </button>
@@ -55,7 +55,8 @@
         <span class="maturity-number">16+</span>
     </span>
 </div>
-<!-- drama collection -->
+
+<!-- Drama Collection -->
 <section class="all-drama">
     <div class="tv-dramas" id="dramas">
         <h2 class="tvd-h2">Tv Dramas</h2>
@@ -85,226 +86,58 @@
             </div>
         </div>
     </div>
-    <div class="aror">
-        <!-- scroll div1-width -->
-        <a class="prev" onclick="document.getElementById('div1-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div1-width').scrollLeft += 300">&#10095;</a>
-    </div>
-    <!-- trending now -->
-    <div class="trending-now">
-        <h2 class="all-tvd-h2">Trending now</h2>
-        <div class="second-div-width">
-            <div class="second-all-movie-div" id="div2-width">
-                <div class="control-z">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/controlz.jpg?raw=true" alt="contro z">
 
-                </div>
-                <div class="crazy-rich-asians">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/crazy%20rich%20asian.webp" alt="crazy-rich-asians">
-                </div>
-                <div class="blood">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/blood.jpg?raw=true" alt="blood series">
-                </div>
-                <div class="mimi">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/mimi.webp" alt="mimi">
-                </div>
-                <div class="my-secrete-romance">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/secrete%20romance.webp" alt="my-secrete-romance">
-                </div>
-                <div class="insatiable">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/insatiable.jpg?raw=true" alt="insatiable">
-                </div>
-                <div class="tempted">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/tempted.webp" alt="tempted">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Carrossel -->
     <div class="aror">
-        <a class="prev" onclick="document.getElementById('div2-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div2-width').scrollLeft += 300">&#10095;</a>
-    </div>
-    <!-- my list -->
-    <div class="my-list" id="list">
-        <h2 class="h2list">My List</h2>
-        <div class="list-div-width">
-            <div class="second-div-list" id="div3-width">
-                <div class="nevertheless-list">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/nevertheless.jpg?raw=true" alt="">
-                </div>
-                <div class="ije">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/ije.webp" alt="ije">
-                </div>
-                <div class="controlz-list">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/controlz.jpg?raw=true" alt="control-z">
-                </div>
-                <div class="hwarang">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/hwarang.webp" alt="hwarang">
-                </div>
-                <div class="one-day">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/oneday.webp" alt="one day">
-                </div>
-                <div class="blood-in-list">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/blood.jpg?raw=true" alt="blood">
-                </div>
-                <div class="blade">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/blade.webp" alt="blade series">
-                </div>
-                <div class="vincezo">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/vincenzo.jpg?raw=true" alt="vincenzo image">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aror">
-        <a class="prev" onclick="document.getElementById('div3-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div3-width').scrollLeft += 300">&#10095;</a>
-    </div>
-    <!-- only on netflix -->
-    <div class="only-on-netflix">
-        <h2 class="tvtvd-h2">Only On Netflix</h2>
-        <div class="netflix-div-width">
-            <div class="netflix-all-movie-div" id="div4-width">
-                <div class="nevertheless-list">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/never-big-img.webp" alt="">
-                </div>
-                <div class="ije">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/vincenzo-bigimg.webp" alt="ije">
-                </div>
-                <div class="controlz-list">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/not%20okaybig%20img.webp" alt="control-z">
-                </div>
-                <div class="hwarang">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/outerbanks%20bigimg.webp" alt="hwarang">
-                </div>
-                <div class="one-day">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/spaceswipper.webp" alt="one day">
-                </div>
-                <div class="blood-in-list">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/blood%20red%20sky.webp" alt="blood">
-                </div>
-                <div class="blade">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/blood%20and%20water%20bigimg.webp" :alt="blade series">
-                </div>
-                <div class="image">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/cha-cha-hometpwn.webp" alt="cha-cha-hometpwn">
-                </div>
-                <div class="image">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/Hes-all-that.jpg?raw=true" alt="he's all that" width="250">
-                </div>
-                <div class="image">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/sweet-girl.jpg?raw=true" alt="" width="250">
-                </div>
-                <div class="image">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/king-of-boys.webp" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aror">
-        <a class="prev" onclick="document.getElementById('div4-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div4-width').scrollLeft += 300">&#10095;</a>
-    </div>
-    <div class="top10-now" id="top-tv">
-        <h2 class="top10-tvd-h2">Top 10 In Nigeria</h2>
-        <div class="top10-div-width">
-            <div class="top10-all-movie-div" id="div5-width">
-                <div class="quams-money">
-                    <div class="topp-one"></div>
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/quans%20money.webp" alt="quams money">
-                </div>
-                <div class="top2-film-nigerial">
-                    <div class="half-circle"></div>
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/top%20two%20netflix.webp" alt="72 film" class="imange">
-                </div>
-                <div class="mercenary">
-                    <div class="number-three-css"></div>
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/mercenary.webp" alt="mercenary series">
-                </div>
-                <div class="div-number-four">
-                    <div class="number-four"></div>
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/resort%20to%20love.jpeg?raw=true" alt="Resort to love">
-                </div>
-                <div class="div-number-five">
-                    <div class="number-five-css"></div>
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/ije%20top%20five.webp" alt="ije">
-                </div>
-                <div class="div-number-6">
-                    <div class="number-six">6</div>
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/sex%20life.jpeg?raw=true" alt="sex life" class="sex-life-img">
-                </div>
-                <div class="div-number-7">
-                    <div class="number-seven"></div>
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/sex%20life.jpeg?raw=true" alt="sex life">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aror">
-        <a class="prev" onclick="document.getElementById('div5-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div5-width').scrollLeft += 300">&#10095;</a>
-    </div>
-    <!-- women behind the screen -->
-    <div class="my-list div-list">
-        <h2 class="h2list" style="position:relative; top:60px">Women behind the screen</h2> <a class="sec-next">&#10095;</a>
-        <div class="list-div-width">
-            <div class="second-div-list" id="div3-width">
-                <div class="nevertheless-list">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/intern.webp" alt="">
-                </div>
-                <div class="ije">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/what%20girl%20wants.webp" alt="ije">
-                </div>
-                <div class="controlz-list">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/five%20feet.webp" alt="control-z">
-                </div>
-                <div class="hwarang">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/wonderwoman.webp" alt="hwarang">
-                </div>
-                <div class="one-day">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/enchanted.webp" alt="one day">
-                </div>
-                <div class="blood-in-list">
-                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/jiva.jpeg?raw=true" alt="blood">
-                </div>
-                <div class="blade">
-                    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/angel.webp" alt="blade series">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aror">
-        <a class="prev" onclick="document.getElementById('div3-width').scrollLeft -= 300">&#10094;</a>
-        <a class="next" onclick="document.getElementById('div3-width').scrollLeft += 300">&#10095;</a>
+        <a class="prev" onclick="scrollCarrousel('div1-width', -300)">&#10094;</a>
+        <a class="next" onclick="scrollCarrousel('div1-width', 300)">&#10095;</a>
     </div>
 
-    <footer>
-        <div class="grid-container">
-            <div class="grid-item">
-                <span><i class="fab fa-facebook-square"></i></i></span>
-                <span><i class="fab fa-instagram"></i></span>
-                <span><i class="fab fa-youtube"></i></span>
-                <p>Audio and Subtitle</p>
-                <p>Media Center</p>
-                <p>Privacy</p>
-                <p>Contact Us</p>
-                <p class="p-grid">Service code</p>
-                <p>&copy;1997-2021 Netflix, inc,(7cBab736-9ae4-4251-9ea9-cf9fdd09f7cc)</p>
-            </div>
-            <div class="grid-item">
-                <p>Audio Description</p>
-                <p>Investor Relations</p>
-                <p>Legal Notices</p>
-            </div>
-            <div class="grid-item">
-                <p>Help Center</p>
-                <p>Jobs</p>
-                <p>Cookie Preference</p>
-            </div>
-            <div class="grid-item">
-                <p>Gift Cards</p>
-                <p>Terms Of Use</p>
-                <p>Corperate Information</p>
-            </div>
-    </footer>
+    <!-- JavaScript for Carousel -->
+    <script>
+        function scrollCarrousel(elementId, offset) {
+            const element = document.getElementById(elementId);
+            element.scrollLeft += offset;
+        }
+
+        document.querySelectorAll('.next, .prev').forEach(button => {
+            button.addEventListener('click', function() {
+                const offset = this.classList.contains('next') ? 300 : -300;
+                const target = this.closest('div').querySelector('.div-width');
+                target.scrollLeft += offset;
+            });
+        });
+    </script>
 </section>
+
+<!-- Footer -->
+<footer>
+    <div class="grid-container">
+        <div class="grid-item">
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-instagram"></i></span>
+            <span><i class="fab fa-youtube"></i></span>
+            <p>Audio and Subtitle</p>
+            <p>Media Center</p>
+            <p>Privacy</p>
+            <p>Contact Us</p>
+            <p class="p-grid">Service code</p>
+            <p>&copy;1997-2021 Netflix, inc,(7cBab736-9ae4-4251-9ea9-cf9fdd09f7cc)</p>
+        </div>
+        <div class="grid-item">
+            <p>Audio Description</p>
+            <p>Investor Relations</p>
+            <p>Legal Notices</p>
+        </div>
+        <div class="grid-item">
+            <p>Help Center</p>
+            <p>Jobs</p>
+            <p>Cookie Preference</p>
+        </div>
+        <div class="grid-item">
+            <p>Gift Cards</p>
+            <p>Terms Of Use</p>
+            <p>Corperate Information</p>
+        </div>
+    </div>
+</footer>

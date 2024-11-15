@@ -951,3 +951,68 @@ margin-top: 20px;
   }
 
 }
+
+/* Organize as regras de estilo em um arquivo CSS */
+.user-img {
+    float: right;
+}
+
+.between-img-div img {
+    width: 100%;
+}
+
+.titleWrapper {
+    transform-origin: left bottom;
+    transition: transform 1.3s ease;
+}
+
+.info-wrapper {
+    transition: opacity 600ms 200ms;
+}
+
+.info-btn {
+    font-size: 1rem;
+}
+
+.ratin-div {
+    float: right;
+}
+
+.all-drama, .trending-now, .my-list, .only-on-netflix, .top10-now {
+    margin: 20px 0;
+}
+
+.aror {
+    position: relative;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Exemplo de grid para o footer */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.grid-item {
+    padding: 10px;
+    background-color: #f0f0f0;
+}
