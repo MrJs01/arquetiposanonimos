@@ -68,32 +68,33 @@ class Films extends \yii\db\ActiveRecord
     }
 
 
-    public function saveFiles($mainImage, $additionalFiles)
+    public function saveFiles($imageInput, $filesInput)
     {
-        $savedFiles = [];
-
-        // Salva a imagem principal
-        if ($mainImage) {
-            $mainImagePath = 'uploads/' . uniqid('img_', true) . '.jpg'; // ou qualquer outra extensão conforme o tipo de imagem
-            if (move_uploaded_file($mainImage, Yii::getAlias('@webroot') . '/' . $mainImagePath)) {
-                $savedFiles[] = $mainImagePath;
+        // Salvar a imagem principal
+        if ($imageInput) {
+            $imagePath = 'uploads/' . uniqid() . '.' . pathinfo($imageInput, PATHINFO_EXTENSION);
+            if (move_uploaded_file($imageInput, Yii::getAlias('@webroot') . '/' . $imagePath)) {
+                $this->img = $imagePath;
+            } else {
+                return false; // Se falhar ao mover a imagem
             }
         }
 
-        // Salva os arquivos adicionais
-        foreach ($additionalFiles as $file) {
-            $filePath = 'uploads/' . uniqid('img_', true) . '.jpg'; // ou qualquer outra extensão conforme o tipo de imagem
-            if (move_uploaded_file($file, Yii::getAlias('@webroot') . '/' . $filePath)) {
-                $savedFiles[] = $filePath;
+        // Salvar os arquivos adicionais
+        if ($filesInput) {
+            $filePaths = [];
+            foreach ($filesInput as $file) {
+                $filePath = 'uploads/' . uniqid() . '.' . pathinfo($file, PATHINFO_EXTENSION);
+                if (move_uploaded_file($file, Yii::getAlias('@webroot') . '/' . $filePath)) {
+                    $filePaths[] = $filePath;
+                } else {
+                    return false; // Se falhar ao mover algum arquivo
+                }
             }
+
+            $this->files = implode(',', $filePaths); // Salva a lista de arquivos no campo `files`
         }
 
-        if (!empty($savedFiles)) {
-            // Atualiza o campo 'files' com os arquivos salvos
-            $this->files = implode(',', $savedFiles); // Salva como string separada por vírgulas
-            return true;
-        }
-
-        return false;
+        return true;
     }
 }
