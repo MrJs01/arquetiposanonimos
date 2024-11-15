@@ -70,8 +70,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         <?php if (!empty($this->params['breadcrumbs'])): ?>
             <?= \yii\widgets\Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
         <?php endif ?>
-        <?= \yii\bootstrap5\Alert::widget() ?>
         <?= $content ?>
+        <?= \yii\bootstrap5\Alert::widget() ?>
 
     </div>
 
