@@ -9,6 +9,9 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Films;
+// UploadedFile
+use app\models\UploadForm;
 
 class SiteController extends Controller
 {
@@ -141,5 +144,30 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+
+
+    public function actionAdminFilm($id = null)
+    {
+        $model = $id ? Films::findOne($id) : new Films();
+
+        // Verifica se é um POST request
+        if ($model->load(Yii::$app->request->post())) {
+            // Recebe os arquivos de imagem
+            $model->filesInput = UploadedFile::getInstances($model, 'filesInput');
+            $model->imgInput = UploadedFile::getInstance($model, 'imgInput');
+
+            if ($model->uploadFiles() && $model->save()) {
+                Yii::$app->session->setFlash('success', 'Film saved successfully!');
+                return $this->redirect(['admin-film', 'id' => $model->id]);
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error saving the film.');
+            }
+        }
+
+        return $this->render('admin-film', [
+            'model' => $model,
+        ]);
     }
 }

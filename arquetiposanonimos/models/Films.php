@@ -1,8 +1,8 @@
 <?php
-
 namespace app\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "films".
@@ -17,6 +17,12 @@ use Yii;
  */
 class Films extends \yii\db\ActiveRecord
 {
+    /**
+     * @var UploadedFile[]
+     */
+    public $filesInput; // Para o upload de múltiplas imagens
+    public $imgInput; // Para o upload da imagem principal
+
     /**
      * {@inheritdoc}
      */
@@ -34,7 +40,39 @@ class Films extends \yii\db\ActiveRecord
             [['title', 'description', 'files', 'slug', 'views', 'img'], 'required'],
             [['title', 'description', 'files', 'slug', 'img'], 'string'],
             [['views'], 'integer'],
+            [['filesInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, gif', 'maxFiles' => 10],
+            [['imgInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
         ];
+    }
+
+    /**
+     * Salva os arquivos de imagem enviados.
+     */
+    public function uploadFiles()
+    {
+        if ($this->validate()) {
+            // Para as imagens dos filmes
+            if ($this->filesInput) {
+                $filePaths = [];
+                foreach ($this->filesInput as $file) {
+                    $filePath = 'uploads/films/' . uniqid() . '.' . $file->extension;
+                    if ($file->saveAs($filePath)) {
+                        $filePaths[] = $filePath;
+                    }
+                }
+                $this->files = implode(',', $filePaths);
+            }
+
+            // Para a imagem principal
+            if ($this->imgInput) {
+                $imgPath = 'uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
+                if ($this->imgInput->saveAs($imgPath)) {
+                    $this->img = $imgPath;
+                }
+            }
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -46,10 +84,10 @@ class Films extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'description' => 'Description',
-            'files' => 'Files',
+            'files' => 'Files (separate by commas)',
             'slug' => 'Slug',
             'views' => 'Views',
-            'img' => 'Img',
+            'img' => 'Image (main)',
         ];
     }
 }
