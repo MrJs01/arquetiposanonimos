@@ -16,7 +16,7 @@ $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 // favicon
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '/assets_main/logo.png']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '/assets_main/img/logo.png']);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
