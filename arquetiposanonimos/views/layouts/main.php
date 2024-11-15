@@ -34,7 +34,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '/a
     <meta name="author" content="" />
     <title>Arquétipos Anônimos - Plataforma de Exploração e Discussão sobre Tipologias e Arquétipos</title>
 
-    <link rel="icon" type="image/x-icon" href="assets_main/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
