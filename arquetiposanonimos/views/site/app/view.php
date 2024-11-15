@@ -47,9 +47,6 @@ $files = explode(',', $model->files);
             el: ".swiper-pagination",
             clickable: true,
         },
-        loop: true, // Loop infinito para os slides
-        autoplay: {
-            delay: 3000, // Intervalo de 3 segundos entre os slides
-        },
+   
     });
 </script>
