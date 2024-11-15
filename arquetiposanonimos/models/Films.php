@@ -41,17 +41,22 @@ class Films extends \yii\db\ActiveRecord
             [['title', 'description', 'slug', 'views'], 'required'],
             [['title', 'description', 'files', 'slug', 'img'], 'string'],
             [['views'], 'integer'],
+            // Verifica se os arquivos de imagem foram enviados, caso contrário, não é necessário validar
             [['filesInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, gif', 'maxFiles' => 10],
             [['imgInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
-            // Torna os campos de arquivos não obrigatórios, mas validando se houver arquivo
+
+            // Validação condicional para o campo 'files'
             [['files'], 'required', 'when' => function ($model) {
-                return !empty($model->filesInput);
+                return !empty($model->filesInput); // Só exige 'files' se houver arquivos enviados
             }, 'message' => 'Files cannot be blank.'],
+
+            // Validação condicional para o campo 'img'
             [['img'], 'required', 'when' => function ($model) {
-                return !empty($model->imgInput);
+                return !empty($model->imgInput); // Só exige 'img' se houver imagem enviada
             }, 'message' => 'Image (main) cannot be blank.'],
         ];
     }
+
 
 
     /**
