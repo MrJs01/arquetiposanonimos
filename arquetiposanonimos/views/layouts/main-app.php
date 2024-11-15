@@ -50,7 +50,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
         </div>
 
-        <div class="" style="overflow: scroll;">
+        <div class="" style="    width: 100%;
+    overflow: scroll;
+    height: 100vh;">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
                 <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
             <?php endif ?>
