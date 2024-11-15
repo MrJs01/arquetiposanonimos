@@ -44,6 +44,9 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     </style>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -58,7 +61,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
-                 
+
                 </ul>
             </div>
         </div>
