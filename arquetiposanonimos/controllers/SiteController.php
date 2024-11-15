@@ -111,39 +111,13 @@ class SiteController extends Controller
                 }
             }
 
-            // Verifica e salva a imagem principal
-            $imageInput = isset($_FILES['Films']['name']['imgInput']) && $_FILES['Films']['error']['imgInput'] == UPLOAD_ERR_OK
-                ? $_FILES['Films']['tmp_name']['imgInput'] : null;
-
-            // Verifica e salva os arquivos adicionais
-            $filesInput = isset($_FILES['Films']['name']['filesInput']) && $_FILES['Films']['error']['filesInput'][0] == UPLOAD_ERR_OK
-                ? $_FILES['Films']['tmp_name']['filesInput'] : [];
+            // Processa as imagens
+            $imageInput = UploadedFile::getInstance($model, 'imgInput');
+            $filesInput = UploadedFile::getInstances($model, 'filesInput');
 
             // Salva as imagens
             if ($imageInput || $filesInput) {
-                if ($imageInput) {
-                    // Salva a imagem principal
-                    $imagePath = 'uploads/' . uniqid() . '.' . pathinfo($_FILES['Films']['name']['imgInput'], PATHINFO_EXTENSION);
-                    if (!move_uploaded_file($imageInput, Yii::getAlias('@webroot') . '/' . $imagePath)) {
-                        return false; // Se falhar ao mover a imagem principal
-                    }
-                    $model->img = $imagePath;
-                }
-
-                // Processa as imagens adicionais
-                if ($filesInput) {
-                    $filePaths = [];
-                    foreach ($filesInput as $file) {
-                        $filePath = 'uploads/' . uniqid() . '.' . pathinfo($file, PATHINFO_EXTENSION);
-                        if (move_uploaded_file($file, Yii::getAlias('@webroot') . '/' . $filePath)) {
-                            $filePaths[] = $filePath;
-                        } else {
-                            return false; // Se falhar ao mover algum arquivo adicional
-                        }
-                    }
-                    // Atualiza o campo `files` com a nova lista de imagens
-                    $model->files = implode(',', $filePaths);
-                }
+                $model->saveFiles($imageInput, $filesInput);
             }
 
             // Tenta salvar o modelo
