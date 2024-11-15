@@ -115,7 +115,6 @@ $this->title = 'Netflix Clone';
                     </div>
                 <?php endfor; ?>
             </div>
-            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -168,10 +167,6 @@ $this->title = 'Netflix Clone';
             slidesPerView: 4,
             spaceBetween: 20,
             loop: true,
-            pagination: {
-                el: swiperContainer.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
             navigation: {
                 nextEl: swiperContainer.querySelector('.swiper-button-next'),
                 prevEl: swiperContainer.querySelector('.swiper-button-prev'),
