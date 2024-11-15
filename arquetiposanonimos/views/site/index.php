@@ -26,7 +26,7 @@
 </section>
 
 <!-- Projetos -->
-<section class="projects-section bg-light" id="projects" style="background-image: url('/assets_main/img/wal8.jpeg')">
+<section class="projects-section bg-light" id="projects">
     <div class="container px-4 px-lg-5">
         <!-- Projeto Destaque -->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
