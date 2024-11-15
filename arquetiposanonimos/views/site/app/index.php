@@ -100,7 +100,7 @@ $this->title = 'Netflix Clone';
 
 <!-- Três Swipers Menores -->
 <div class="container-fluid">
-    <h2 class="text-white">Filmes em Destaque</h2>
+    <h2 class="text-white m-5">Filmes em Destaque</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <?php for ($j = 0; $j < 8; $j++): // Criando 8 filmes por carrossel 
@@ -120,7 +120,7 @@ $this->title = 'Netflix Clone';
         <div class="swiper-button-next"></div>
     </div>
 
-    <h2 class="text-white">Series em Destaque</h2>
+    <h2 class="text-white m-5">Series em Destaque</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <?php for ($j = 0; $j < 8; $j++): // Criando 8 seíries por carrossel 
@@ -140,7 +140,7 @@ $this->title = 'Netflix Clone';
         <div class="swiper-button-next"></div>
     </div>
 
-    <h2 class="text-white">Animes em Destaque</h2>
+    <h2 class="text-white m-5">Animes em Destaque</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <?php for ($j = 0; $j < 8; $j++): // Criando 8 animes por carrossel 
