@@ -70,7 +70,7 @@
     <div class="container">
         <h3 class="mb-4">Apoie o Projeto e Tenha Acesso a Conteúdo Exclusivo</h3>
         <p>Este projeto é financiado por meio de anúncios e de uma área de membros paga, onde você pode acessar audiobooks, PDFs exclusivos e conteúdos interativos. Além disso, estamos utilizando links de afiliados para a venda de livros de Carl Jung e outros materiais de psicologia.</p>
-        <a href="#membership" class="btn btn-primary mt-4">Assine Agora</a>
+        <button href="#" class="btn btn-dark mt-4" disabled>Em breve</button>
     </div>
 </section>
 
@@ -79,7 +79,7 @@
     <div class="container">
         <h3 class="mb-4">Audiobooks e IA: Aprenda de Forma Interativa</h3>
         <p>Estamos utilizando IA para gerar audiobooks a partir de textos sobre Psicologia Analítica e Arquétipos. Isso permite que você tenha acesso a conteúdos de áudio enquanto estuda, facilitando a absorção de informações. Os conteúdos são convertidos para áudio de forma automatizada com a tecnologia Caleb TTS.</p>
-        <a href="#content" class="btn btn-dark mt-4">Explore os Audiobooks</a>
+        <button href="#" class="btn btn-dark mt-4" disabled>Em breve</button>
     </div>
 </section>
 
@@ -88,7 +88,7 @@
     <div class="container">
         <h3 class="mb-4">Organização do Conteúdo para Leitura e Estudo</h3>
         <p>O conteúdo da plataforma é organizado de maneira a facilitar o estudo e a navegação. Você poderá acessar materiais em diferentes formatos: textos, áudios, vídeos e fóruns de discussão. As informações estão divididas em categorias como: "Estudos", "Blog", "Jogos" e "Áudio", para que você possa personalizar sua experiência de aprendizagem.</p>
-        <a href="#projects" class="btn btn-primary mt-4">Iniciar os Estudos</a>
+        <button href="#" class="btn btn-dark mt-4" disabled>Em breve</button>
     </div>
 </section>
 
