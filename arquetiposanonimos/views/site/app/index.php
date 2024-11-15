@@ -154,13 +154,13 @@ $comece_aqui = [
     <h2 class="text-white m-5">Filmes em Destaque</h2>
     <div class="swiper mySwiper" id="swiper-destaques">
         <div class="swiper-wrapper">
-            <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel
+            <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel 
             ?>
                 <div class="swiper-slide" style="width: auto;">
-                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px; ">
-                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme"  style="object-fit: cover;">
+                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px;">
+                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" style="object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $filme['title'] ?> </h5>
+                            <h5 class="card-title"><?= $filme['title'] ?></h5>
                             <p class="card-text"><?= $filme['description'] ?></p>
                         </div>
                     </div>
@@ -170,26 +170,24 @@ $comece_aqui = [
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
+
     <script>
         var swiper_destaques = new Swiper("#swiper-destaques", {
-            // Deixar slides lado a lado automaticamente
             spaceBetween: 15, // Espaçamento entre os slides
-
             slidesPerView: 'auto', // Deixa os slides ajustarem o tamanho automaticamente
 
+            // Navegação
             navigation: {
                 nextEl: $("#swiper-destaques").find(".swiper-button-next")[0],
                 prevEl: $("#swiper-destaques").find(".swiper-button-prev")[0],
             },
 
             // Ajuste adicional para o alinhamento correto
-            centeredSlides: true, // Centraliza os slides se necessário
+            centeredSlides: true, // Centraliza os slides
+            initialSlide: 1, // Começa no segundo slide
         });
-
-        // primeir oslide 
-        swiper_destaques.slideTo(0);
-        
     </script>
+
 
 </div>
 
