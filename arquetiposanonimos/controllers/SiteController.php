@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\models\Films;
 // UploadedFile
 use app\models\UploadForm;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -160,13 +161,13 @@ class SiteController extends Controller
 
             if ($model->uploadFiles() && $model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
-                return $this->redirect(['admin-film', 'id' => $model->id]);
+                return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error saving the film.');
             }
         }
 
-        return $this->render('admin-film', [
+        return $this->render('app/admin/film', [
             'model' => $model,
         ]);
     }
