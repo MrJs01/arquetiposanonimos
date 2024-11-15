@@ -70,9 +70,10 @@
 </section>
 
 <!-- Contato -->
-<section class="contact-section bg-black">
+<section class="contact-section bg-black" id="contato">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 w-100 justify-content-center">
+            <!-- Email -->
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
@@ -83,6 +84,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Telefone -->
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
@@ -94,25 +96,44 @@
                 </div>
             </div>
         </div>
+        <!-- Redes sociais -->
         <div class="social d-flex justify-content-center">
-            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+            <a class="mx-2" href="https://www.instagram.com/arquetiposanonimos/"><i class="fab fa-instagram"></i></a>
+            <a class="mx-2" href="https://www.youtube.com/@Arqu%C3%A9tiposAn%C3%B4nimos"><i class="fab fa-youtube"></i></a>
         </div>
-        <!-- Links dos grupos -->
-        <div class="row gx-4 gx-lg-5 w-100 justify-content-center mt-4">
-            <div class="col-md-6 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-comments text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Grupos</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">
-                            <p><a href="https://chat.whatsapp.com/Fx8yAbBQ8JtEqrg3wUb7Jq" target="_blank">Grupo principal A.A</a></p>
-                            <p><a href="https://chat.whatsapp.com/IX0Vbu0eoEu03bRHAkAwDR" target="_blank">Grupo Arquitetos Tipológicos</a></p>
+        <!-- Links para grupos -->
+        <div class="contact-links mt-5">
+            <h4 class="text-center text-white">Grupos e Links Importantes</h4>
+            <div class="row gx-4 gx-lg-5">
+                <!-- Grupo Arquitetos Tipológicos -->
+                <div class="col-md-6 mb-3">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Arquitetos Tipológicos</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">
+                                <a href="https://chat.whatsapp.com/IX0Vbu0eoEu03bRHAkAwDR" target="_blank">Acesse o grupo Arquitetos Tipológicos</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Grupo Diálogos | P.L.F | A.A -->
+                <div class="col-md-6 mb-3">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-comments text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Diálogos | P.L.F | A.A</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">
+                                <p>Grupo na comunidade "<strong>Arquétipos Anônimos</strong>" · 475 membros</p>
+                                <p>Para diálogos sobre Psicologia Analítica, Literatura e Filosofia (P.L.F).</p>
+                                <a href="https://chat.whatsapp.com/Fx8yAbBQ8JtEqrg3wUb7Jq" target="_blank">Acesse o grupo principal do A.A.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
             </div>
         </div>
     </div>
