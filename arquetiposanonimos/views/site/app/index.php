@@ -93,23 +93,44 @@
         <a class="next" onclick="scrollCarrousel('div1-width', 300)">&#10095;</a>
     </div>
 
-    <!-- JavaScript for Carousel -->
-    <script>
-        function scrollCarrousel(elementId, offset) {
-            const element = document.getElementById(elementId);
-            element.scrollLeft += offset;
-        }
-
-        document.querySelectorAll('.next, .prev').forEach(button => {
-            button.addEventListener('click', function() {
-                const offset = this.classList.contains('next') ? 300 : -300;
-                const target = this.closest('div').querySelector('.div-width');
-                target.scrollLeft += offset;
-            });
-        });
-    </script>
+   
 </section>
 
+<!-- Ação Collection -->
+<section class="all-action">
+    <div class="tv-actions" id="actions">
+        <h2 class="tvd-h2">Tv Actions</h2>
+        <div class="div-width" id="div2-width">
+            <div class="all-movie-div">
+                <div class="red">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/red.jpg?raw=true" alt="red image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+                <div class="theboys">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/the%20boys.jpg?raw=true" alt="theboys image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aror">
+        <a class="prev" onclick="scrollCarrousel('div2-width', -300)">&#10094;</a>
+        <a class="next" onclick="scrollCarrousel('div2-width', 300)">&#10095;</a>
+    </div>
+</section>
 <!-- Footer -->
 <footer>
     <div class="grid-container">
@@ -141,3 +162,19 @@
         </div>
     </div>
 </footer>
+
+ <!-- JavaScript for Carousel -->
+ <script>
+        function scrollCarrousel(elementId, offset) {
+            const element = document.getElementById(elementId);
+            element.scrollLeft += offset;
+        }
+
+        document.querySelectorAll('.next, .prev').forEach(button => {
+            button.addEventListener('click', function() {
+                const offset = this.classList.contains('next') ? 300 : -300;
+                const target = this.closest('div').querySelector('.div-width');
+                target.scrollLeft += offset;
+            });
+        });
+    </script>
