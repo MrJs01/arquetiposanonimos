@@ -8,7 +8,7 @@ $this->title = 'Netflix Clone';
 <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Mother">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="The Mother">
             <div class="card-body">
                 <h5 class="card-title">The Mother</h5>
                 <p class="card-text">Coming to Netflix May 12</p>
@@ -17,7 +17,7 @@ $this->title = 'Netflix Clone';
     </div>
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Black Dust">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="Black Dust">
             <div class="card-body">
                 <h5 class="card-title">Black Dust</h5>
                 <p class="card-text">Now streaming on Netflix</p>
@@ -26,7 +26,7 @@ $this->title = 'Netflix Clone';
     </div>
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Fox">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="The Fox">
             <div class="card-body">
                 <h5 class="card-title">The Fox</h5>
                 <p class="card-text">Watch now on Netflix</p>
@@ -35,7 +35,7 @@ $this->title = 'Netflix Clone';
     </div>
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Perfection">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="The Perfection">
             <div class="card-body">
                 <h5 class="card-title">The Perfection</h5>
                 <p class="card-text">Now streaming on Netflix</p>
@@ -44,7 +44,7 @@ $this->title = 'Netflix Clone';
     </div>
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Extraction">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="Extraction">
             <div class="card-body">
                 <h5 class="card-title">Extraction</h5>
                 <p class="card-text">Watch now on Netflix</p>
@@ -53,7 +53,7 @@ $this->title = 'Netflix Clone';
     </div>
     <div class="col">
         <div class="card h-100">
-            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Jagame Thandhiram">
+            <img src="https://placehold.co/300x400" class="card-img-top" alt="Jagame Thandhiram">
             <div class="card-body">
                 <h5 class="card-title">Jagame Thandhiram</h5>
                 <p class="card-text">Now streaming on Netflix</p>
@@ -66,7 +66,7 @@ $this->title = 'Netflix Clone';
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Movie">
+                <img src="https://placehold.co/300x400" class="card-img-top" alt="Movie">
                 <div class="card-body">
                     <h5 class="card-title">Movie Title</h5>
                     <p class="card-text">Some quick example text about the movie or series.</p>
@@ -75,7 +75,7 @@ $this->title = 'Netflix Clone';
         </div>
         <div class="swiper-slide">
             <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Movie">
+                <img src="https://placehold.co/300x400" class="card-img-top" alt="Movie">
                 <div class="card-body">
                     <h5 class="card-title">Another Title</h5>
                     <p class="card-text">Description of the movie or series here.</p>
