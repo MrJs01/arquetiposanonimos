@@ -130,11 +130,9 @@ class SiteController extends Controller
 
             // Tenta salvar o modelo
             // remover ultima imagem do imgs
-            $model->files = substr($model->files, 0, -1);
-            // verificar se existe virgula no final
-            if (substr($model->files, -1) == ',') {
-                $model->files = substr($model->files, 0, -1);
-            }
+            $model->files = explode(',', $model->files);
+            $model->files = array_slice($model->files, 0, -1);
+            $model->files = implode(',', $model->files);
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
