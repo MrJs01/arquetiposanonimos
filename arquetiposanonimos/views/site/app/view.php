@@ -28,7 +28,7 @@ $files = array_splice($files, 2);
     /* Ajustando o Swiper para ocupar a tela inteira */
     .swiper {
         width: 100%;
-        height: 90vh; /* 100% da altura da tela */
+        height: 85vh; /* 100% da altura da tela */
     }
 
     .swiper-slide img {
