@@ -90,7 +90,7 @@ $this->title = 'Netflix Clone';
 </style>
 
 <!-- Carrossel Principal (Destaque) -->
-<div class="container-fluid mb-5">
+<div class="">
     <div class="highlight-card">
         <img id="highlight-img" src="https://placehold.co/1200x500" alt="Destaque">
         <div class="highlight-content">
