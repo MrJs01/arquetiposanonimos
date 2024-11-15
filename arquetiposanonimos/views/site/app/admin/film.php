@@ -17,10 +17,10 @@ $this->title = $model->isNewRecord ? 'Create Film' : 'Edit Film';
 <?= $form->field($model, 'views') ?>
 
 <!-- Imagem principal -->
-<?= $form->field($model, 'imgInput')->fileInput() ?>
+<input type="file" name="imageInput">
 
 <!-- Arquivos de imagem múltiplos -->
-<?= $form->field($model, 'filesInput[]')->fileInput(['multiple' => true]) ?>
+<input type="file" name="filesInput[]" multiple>
 
 <div class="form-group">
     <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Save', ['class' => 'btn btn-primary']) ?>
