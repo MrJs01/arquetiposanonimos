@@ -77,8 +77,10 @@ class SiteController extends Controller
         // layout main
         $this->layout = 'main-app';
 
-        return $this->render('app/view');
-
+        return $this->render('app/view', [
+            'file_name' => $file_name
+        ]);
+    }
     /**
      * Login action.
      *
