@@ -100,19 +100,26 @@ class SiteController extends Controller
                 $model->files = $newOrder;
             }
 
+            // Recupera as imagens excluídas
+            $deletedImages = Yii::$app->request->post('deletedImages', '');
+            if ($deletedImages) {
+                // Remove as imagens excluídas da lista
+                $deletedImages = explode(',', $deletedImages);
+                foreach ($deletedImages as $deletedImage) {
+                    if (!empty($deletedImage)) {
+                        // Aqui você pode implementar o código para excluir o arquivo fisicamente
+                        @unlink(Yii::getAlias('@webroot') . '/' . $deletedImage);
+                    }
+                }
+            }
+
             // Verifica se a imagem principal foi enviada corretamente
             $imageInput = isset($_FILES['Films']['name']['imgInput']) && $_FILES['Films']['error']['imgInput'] == UPLOAD_ERR_OK
                 ? $_FILES['Films']['tmp_name']['imgInput'] : null;
 
             // Verifica se os arquivos adicionais foram enviados corretamente
-            $filesInput = [];
-            if (isset($_FILES['Films']['name']['filesInput'])) {
-                foreach ($_FILES['Films']['name']['filesInput'] as $key => $value) {
-                    if ($_FILES['Films']['error']['filesInput'][$key] == UPLOAD_ERR_OK) {
-                        $filesInput[] = $_FILES['Films']['tmp_name']['filesInput'][$key];
-                    }
-                }
-            }
+            $filesInput = isset($_FILES['Films']['name']['filesInput']) && $_FILES['Films']['error']['filesInput'][0] == UPLOAD_ERR_OK
+                ? $_FILES['Films']['tmp_name']['filesInput'] : [];
 
             // Salva os arquivos se foram enviados
             if ($model->saveFiles($imageInput, $filesInput) && $model->save()) {
@@ -126,32 +133,5 @@ class SiteController extends Controller
         return $this->render('app/admin/film', [
             'model' => $model,
         ]);
-    }
-
-    public function actionFilmDeleteImage()
-    {
-        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-        $file = Yii::$app->request->post('file');
-
-        if ($file && file_exists(Yii::getAlias('@webroot') . '/' . $file)) {
-            // Exclui o arquivo fisicamente
-            unlink(Yii::getAlias('@webroot') . '/' . $file);
-
-            // Atualiza o banco de dados para remover o arquivo da lista de arquivos
-            $model = Films::findOne(['files' => $file]);
-            if ($model) {
-                $files = explode(',', $model->files);
-                $key = array_search($file, $files);
-                if ($key !== false) {
-                    unset($files[$key]);
-                }
-                $model->files = implode(',', $files);
-                $model->save();
-            }
-
-            return ['success' => true];
-        }
-
-        return ['success' => false];
     }
 }
