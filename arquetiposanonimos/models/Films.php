@@ -108,14 +108,5 @@ class Films extends \yii\db\ActiveRecord
         }
     }
 
-    public function updateImageOrder($imageOrder)
-    {
-        foreach ($imageOrder as $index => $imageId) {
-            $image = Image::findOne($imageId);
-            if ($image) {
-                $image->order = $index + 1; // Defina a ordem
-                $image->save();
-            }
-        }
-    }
+    
 }
