@@ -11,7 +11,7 @@
 <div class="logo-and-text">
     <div class="titleWrapper">
         <div class="billboard-title">
-            <img class="title-logo" src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/netflixsvg.webp" alt="Netflix logo">
+            <img class="title-logo" src="/assets_main/img/wal3.jpeg" alt="Netflix logo">
         </div>
     </div>
 
@@ -21,12 +21,7 @@
                 After a mysterious disease kills every resident over 21 years old, survivors of a town must fend for themselves when the government quarantines them.
             </div>
         </div>
-        <button class="color-primary" id="playButton">
-            <span class="info-btn">Play</span>
-        </button>
-        <button class="button-secondary" id="infoButton">
-            <span class="info-btn">More Info</span>
-        </button>
+   
     </div>
 </div>
 
