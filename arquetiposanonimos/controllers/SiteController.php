@@ -127,4 +127,31 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionFilmDeleteImage()
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $file = Yii::$app->request->post('file');
+
+        if ($file && file_exists(Yii::getAlias('@webroot') . '/' . $file)) {
+            // Exclui o arquivo fisicamente
+            unlink(Yii::getAlias('@webroot') . '/' . $file);
+
+            // Atualiza o banco de dados para remover o arquivo da lista de arquivos
+            $model = Films::findOne(['files' => $file]);
+            if ($model) {
+                $files = explode(',', $model->files);
+                $key = array_search($file, $files);
+                if ($key !== false) {
+                    unset($files[$key]);
+                }
+                $model->files = implode(',', $files);
+                $model->save();
+            }
+
+            return ['success' => true];
+        }
+
+        return ['success' => false];
+    }
 }
