@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => getenv('DB_DSN'),
+    'dsn' => 'mysql:host=localhost;dbname=u750615799_arquetiposanon',
     'username' => getenv('DB_USERNAME'),
     'password' => getenv('DB_PASSWORD'),
     'charset' => 'utf8',      // Charset desejado
