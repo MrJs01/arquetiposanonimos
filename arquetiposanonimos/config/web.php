@@ -47,7 +47,6 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
-                '/app/' => 'site/app',
                 '/app' => 'site/app',
                 //https://arquetiposanonimos.crom.live/app/view/boas-vindas_comece-aqui
                 '/app/view/<file_name>' => 'site/view',
