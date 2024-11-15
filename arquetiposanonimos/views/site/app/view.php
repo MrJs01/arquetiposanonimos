@@ -9,6 +9,10 @@ $files = explode(',', $model->files);
 
 ?>
 
+<h1 class="text-center mt-3"> <?= $model->title ?> </h1>
+
+<p class="text-center"> <?= $model->description ?> </p>
+
 
 <!-- swiper slide -->
 <div class="p-0">
