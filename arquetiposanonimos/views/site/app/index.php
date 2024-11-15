@@ -102,23 +102,55 @@ $this->title = 'Netflix Clone';
     </div>
 </div>
 
+<?php
+
+$comece_aqui = [
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0001.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0002.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0003.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0004.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+  
+]
+
+?>
+
 <!-- Três Swipers Menores -->
 <div class="container-fluid">
     <h2 class="text-white m-5">Filmes em Destaque</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <?php for ($j = 0; $j < 8; $j++): // Criando 8 filmes por carrossel 
+            <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel
             ?>
                 <div class="swiper-slide">
-                    <div class="card" onclick="location.href='/filme.php?id=<?= $j ?>'">
-                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Filme">
+                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'">
+                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme">
                         <div class="card-body">
-                            <h5 class="card-title">Título do Filme <?= $j + 1 ?></h5>
-                            <p class="card-text">Descrição curta do filme ou série.</p>
+                            <h5 class="card-title"><?= $filme['title'] ?> </h5>
+                            <p class="card-text"><?= $filme['description'] ?></p>
                         </div>
                     </div>
                 </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
