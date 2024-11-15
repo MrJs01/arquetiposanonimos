@@ -395,3 +395,50 @@
             </div>
     </footer>
 </section>
+
+<script>
+    // JavaScript for Carousel/Slider navigation
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the navigation buttons and the items to slide
+    const prevBtns = document.querySelectorAll('.prev');
+    const nextBtns = document.querySelectorAll('.next');
+    const sliders = document.querySelectorAll('.all-movie-div, .second-all-movie-div, .netflix-all-movie-div, .top10-all-movie-div, .second-div-list');
+
+    // Function to slide the images left (prev) or right (next)
+    function moveSlide(slider, direction) {
+        const slideWidth = slider.querySelector('div').offsetWidth; // Assuming all images have the same width
+        const currentTransform = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
+        
+        // Determine new position based on direction
+        const newPosition = direction === 'next' ? currentTransform - slideWidth : currentTransform + slideWidth;
+
+        // Apply the transform to create sliding effect
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(${newPosition}px)`;
+    }
+
+    // Add event listeners to the "next" and "prev" buttons
+    prevBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const parentSlider = btn.closest('.aror').previousElementSibling;  // Find the slider container
+            moveSlide(parentSlider, 'prev');
+        });
+    });
+
+    nextBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const parentSlider = btn.closest('.aror').previousElementSibling;  // Find the slider container
+            moveSlide(parentSlider, 'next');
+        });
+    });
+
+    // Optionally, you could add automatic sliding with setInterval
+    // setInterval(() => {
+    //     nextBtns.forEach((btn) => {
+    //         btn.click(); // Trigger next button click every few seconds
+    //     });
+    // }, 5000); // Slide every 5 seconds
+});
+
+</script>
