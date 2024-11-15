@@ -20,7 +20,7 @@
     /* Ajustando o Swiper para ocupar a tela inteira */
     .swiper {
         width: 100%;
-        height: 100vh; /* 100% da altura da tela */
+        height: 90vh; /* 100% da altura da tela */
     }
 
     .swiper-slide img {
