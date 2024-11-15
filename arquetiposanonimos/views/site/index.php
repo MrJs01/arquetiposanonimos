@@ -11,7 +11,7 @@
 </header>
 
 <!-- Sobre -->
-<section class="about-section text-center w-100 d-grid justify-content-center" id="about">
+<section class="about-section text-center w-100 d-grid justify-content-center align-items-center" id="about">
     <div class="container row justify-content-center w-100">
         <h2 class="text-white mb-4">Sobre o Projeto</h2>
         <p class="text-white-50">
