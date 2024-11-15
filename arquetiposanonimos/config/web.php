@@ -48,8 +48,8 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '/app' => 'site/app',
-                // https://arquetiposanonimos.crom.live/app/view/boas-vindas/comece-aqui/
-                '/app/view<file_name>/' => 'site/view',
+                //https://arquetiposanonimos.crom.live/app/view/boas-vindas_comece-aqui
+                '/app/view/<file_name>' => 'site/view',
             ],
         ],
     ],
