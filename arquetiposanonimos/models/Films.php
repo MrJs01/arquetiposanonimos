@@ -58,7 +58,7 @@ class Films extends \yii\db\ActiveRecord
         if ($this->validate()) {
             // Para a imagem principal
             if ($this->imgInput) {
-                $imgPath = \Yii::getAlias('@webroot') . 'uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
+                $imgPath = \Yii::getAlias('@webroot') . '/uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
                 if ($this->imgInput->saveAs($imgPath)) {
                     $this->img = $imgPath; // Salva o caminho da imagem principal
                 }
@@ -68,7 +68,7 @@ class Films extends \yii\db\ActiveRecord
             if ($this->filesInput) {
                 $filePaths = [];
                 foreach ($this->filesInput as $file) {
-                    $filePath = \Yii::getAlias('@webroot') . 'uploads/films/' . uniqid() . '.' . $file->extension;
+                    $filePath = \Yii::getAlias('@webroot') . '/uploads/films/' . uniqid() . '.' . $file->extension;
                     if ($file->saveAs($filePath)) {
                         $filePaths[] = $filePath;
                     }
