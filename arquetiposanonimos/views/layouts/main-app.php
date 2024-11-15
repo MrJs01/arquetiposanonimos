@@ -52,7 +52,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <body>
     <?php $this->beginBody() ?>
 
-    <nav class="navbar navbar-expand-lg navbar-dark p-3 d-flex justify-content-between">
+    <nav class="navbar  navbar-dark p-3 d-flex justify-content-between">
         <a class="navbar-brand" href="/app">Arquetipos Anónimos</a>
       
         <div class="collapse navbar-collapse" id="navbarNav">
