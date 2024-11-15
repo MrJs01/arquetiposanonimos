@@ -1,9 +1,9 @@
-<header class="masthead" >
+<header class="masthead" ">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Arquétipos Anônimos</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Explore os arquétipos e tipologias inspirados em Jung e na filosofia.</h2>
+                <h1 class="mx-auto my-0 text-uppercase">Tipologias Psicológicas</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">A Psicologia Analítica de Carl Jung com recursos interativos, narrativos e audiobooks gerados por IA.</h2>
                 <a class="btn btn-primary" href="#about">Começar</a>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="container row justify-content-center w-100">
         <h2 class="text-white mb-4">Sobre o Projeto</h2>
         <p class="text-white-50">
-            Arquétipos Anônimos é uma plataforma que reúne informações sobre tipologias, filosofia e psicologia analítica. Criado para armazenar e compartilhar conhecimentos sobre os arquétipos e o inconsciente coletivo.
+            O projeto Tipologias Psicológicas é uma plataforma inovadora dedicada à Psicologia Analítica de Carl Jung. Nosso objetivo é criar um repositório online de conteúdos sobre arquétipos, tipologias psicológicas e filosofia, oferecendo aos usuários uma experiência imersiva com áudio, texto, vídeos interativos e conteúdos narrativos. Utilizamos IA para gerar audiobooks a partir de textos e integrar uma abordagem multimodal ao estudo de Jung.
         </p>
     </div>
     <img class="img-fluid rounded" src="/assets_main/img/wal3.jpeg" alt="Imagem representativa dos arquétipos" height="300" width="100%" />
@@ -26,27 +26,23 @@
     <div class="container px-4 px-lg-5">
         <!-- Projeto Destaque -->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center rounded" style="background-color: white;">
-            <div class="col-xl-8 col-lg-7">
-                <img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal4.jpeg" alt="Imagem de Arquétipos" />
-            </div>
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal4.jpeg" alt="Imagem de Arquétipos" /></div>
             <div class="col-xl-4 col-lg-5 p-3">
                 <div class="featured-text text-center text-lg-left">
-                    <h4>Exploração dos Arquétipos</h4>
-                    <p class="text-black-50 mb-0">Uma coleção completa sobre arquétipos junguianos e sua representação no inconsciente coletivo.</p>
+                    <h4>Arquétipos e Psicologia Analítica</h4>
+                    <p class="text-black-50 mb-0">Uma vasta coleção sobre arquétipos junguianos e a psicologia analítica, com conteúdos narrativos e audiobooks criados por IA.</p>
                 </div>
             </div>
         </div>
         <!-- Projeto 1 -->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6">
-                <img class="img-fluid" src="/assets_main/img/wal5.jpeg" alt="Imagem de Tipologias" />
-            </div>
+            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal5.jpeg" alt="Imagem de Tipologias" /></div>
             <div class="col-lg-6">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Tipologias Psicológicas</h4>
-                            <p class="mb-0 text-white-50">Desenvolvimento de um espaço de estudo sobre as principais tipologias da psicologia analítica.</p>
+                            <h4 class="text-white">Tipologias Psicológicas e Interatividade</h4>
+                            <p class="mb-0 text-white-50">Conteúdos interativos que exploram as principais tipologias psicológicas, incluindo quizzes, fóruns de discussão e artigos multimídia.</p>
                         </div>
                     </div>
                 </div>
@@ -54,15 +50,13 @@
         </div>
         <!-- Projeto 2 -->
         <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6">
-                <img class="img-fluid" src="/assets_main/img/wal6.jpeg" alt="Imagem de Filosofia" />
-            </div>
+            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal6.jpeg" alt="Imagem de Filosofia" /></div>
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Filosofia e Arquétipos</h4>
-                            <p class="mb-0 text-white-50">Como os arquétipos influenciam o pensamento e as filosofias através da história.</p>
+                            <h4 class="text-white">Filosofia e Arquétipos Narrativos</h4>
+                            <p class="mb-0 text-white-50">Como os arquétipos de Jung moldam o pensamento filosófico. Explore conteúdos narrativos e podcasts sobre o tema.</p>
                         </div>
                     </div>
                 </div>
@@ -71,9 +65,37 @@
     </div>
 </section>
 
+<!-- Monetização e Interatividade -->
+<section class="ads-section bg-dark text-white text-center py-5" id="ads">
+    <div class="container">
+        <h3 class="mb-4">Apoie o Projeto e Tenha Acesso a Conteúdo Exclusivo</h3>
+        <p>Este projeto é financiado por meio de anúncios e de uma área de membros paga, onde você pode acessar audiobooks, PDFs exclusivos e conteúdos interativos. Além disso, estamos utilizando links de afiliados para a venda de livros de Carl Jung e outros materiais de psicologia.</p>
+        <a href="#membership" class="btn btn-primary mt-4">Assine Agora</a>
+    </div>
+</section>
+
+<!-- IA e Conversão de Texto em Áudio -->
+<section class="ai-section bg-light text-center py-5" id="ai">
+    <div class="container">
+        <h3 class="mb-4">Audiobooks e IA: Aprenda de Forma Interativa</h3>
+        <p>Estamos utilizando IA para gerar audiobooks a partir de textos sobre Psicologia Analítica e Arquétipos. Isso permite que você tenha acesso a conteúdos de áudio enquanto estuda, facilitando a absorção de informações. Os conteúdos são convertidos para áudio de forma automatizada com a tecnologia Caleb TTS.</p>
+        <a href="#content" class="btn btn-dark mt-4">Explore os Audiobooks</a>
+    </div>
+</section>
+
+<!-- Organização de Conteúdo e Estudo -->
+<section class="study-section bg-dark text-white text-center py-5" id="content">
+    <div class="container">
+        <h3 class="mb-4">Organização do Conteúdo para Leitura e Estudo</h3>
+        <p>O conteúdo da plataforma é organizado de maneira a facilitar o estudo e a navegação. Você poderá acessar materiais em diferentes formatos: textos, áudios, vídeos e fóruns de discussão. As informações estão divididas em categorias como: "Estudos", "Blog", "Jogos" e "Áudio", para que você possa personalizar sua experiência de aprendizagem.</p>
+        <a href="#projects" class="btn btn-primary mt-4">Iniciar os Estudos</a>
+    </div>
+</section>
+
 <!-- Contato -->
 <section class="contact-section bg-black" id="contact">
     <div class="container px-lg-5 p-3 rounded" style="background-color: black;">
+
         <!-- Redes sociais -->
         <div class="social d-flex justify-content-center rounded">
             <a class="mx-2" href="https://www.instagram.com/arquetiposanonimos/"><i class="fab fa-instagram"></i></a>
@@ -111,6 +133,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
