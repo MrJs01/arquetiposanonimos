@@ -11,9 +11,7 @@ defined('YII_ENABLE_GII') or define('YII_ENABLE_GII', true);
 require __DIR__ . '/../vendor/autoload.php'; // já deve estar presente
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php'; // já deve estar presente
 
-// Adicione esta linha para carregar o .env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+
 
 $config = require __DIR__ . '/../config/web.php';
 
