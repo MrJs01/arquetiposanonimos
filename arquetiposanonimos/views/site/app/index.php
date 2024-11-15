@@ -143,7 +143,7 @@ $comece_aqui = [
             ?>
                 <div class="swiper-slide">
                     <div class="card" onclick="location.href='<?= $filme['link'] ?>'">
-                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="600">
+                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="600" width="400" style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $filme['title'] ?> </h5>
                             <p class="card-text"><?= $filme['description'] ?></p>
