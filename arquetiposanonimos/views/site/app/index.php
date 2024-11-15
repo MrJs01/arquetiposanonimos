@@ -145,7 +145,7 @@ $comece_aqui = [
             ?>
                 <div class="swiper-slide">
                     <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 600px; height: 400px;">
-                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="400" width="600" style="object-fit: cover;">
+                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="200" width="300" style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $filme['title'] ?> </h5>
                             <p class="card-text"><?= $filme['description'] ?></p>
@@ -166,6 +166,7 @@ $comece_aqui = [
                 nextEl: $("#swiper-destaques").find(".swiper-button-next")[0],
                 prevEl: $("#swiper-destaques").find(".swiper-button-prev")[0],
             },
+            
        
         });
     </script>
