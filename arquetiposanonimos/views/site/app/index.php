@@ -205,22 +205,21 @@ $this->title = 'Netflix Clone';
         document.getElementById("highlight-title").textContent = highlight.title;
         document.getElementById("highlight-description").textContent = highlight.description;
 
-        // Define o gradiente de fundo com mais transparência
-        const bgColor = highlight.bgColor; // Presume-se que seja um código hexadecimal
+        // Define o gradiente de fundo com a cor personalizada
+        const bgColor = highlight.bgColor;
         const gradient = `
-        linear-gradient(30deg, ${bgColor}AA 12%, transparent 12.5%, transparent 87%, ${bgColor}AA 87.5%, ${bgColor}AA),
-        linear-gradient(150deg, ${bgColor}AA 12%, transparent 12.5%, transparent 87%, ${bgColor}AA 87.5%, ${bgColor}AA),
-        linear-gradient(30deg, ${bgColor}AA 12%, transparent 12.5%, transparent 87%, ${bgColor}AA 87.5%, ${bgColor}AA),
-        linear-gradient(150deg, ${bgColor}AA 12%, transparent 12.5%, transparent 87%, ${bgColor}AA 87.5%, ${bgColor}AA),
-        linear-gradient(60deg, ${bgColor}55 25%, transparent 25.5%, transparent 75%, ${bgColor}55 75%, ${bgColor}55),
-        linear-gradient(60deg, ${bgColor}55 25%, transparent 25.5%, transparent 75%, ${bgColor}55 75%, ${bgColor}55)
+        linear-gradient(30deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
+        linear-gradient(150deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
+        linear-gradient(30deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
+        linear-gradient(150deg, ${bgColor} 12%, transparent 12.5%, transparent 87%, ${bgColor} 87.5%, ${bgColor}),
+        linear-gradient(60deg, ${bgColor}77 25%, transparent 25.5%, transparent 75%, ${bgColor}77 75%, ${bgColor}77),
+        linear-gradient(60deg, ${bgColor}77 25%, transparent 25.5%, transparent 75%, ${bgColor}77 75%, ${bgColor}77)
     `;
         document.body.style.backgroundImage = gradient;
 
         // Atualiza o índice para o próximo destaque
         currentHighlight = (currentHighlight + 1) % destaques.length;
     }
-
 
     setInterval(updateHighlight, 3000); // Troca a cada 3 segundos
 
