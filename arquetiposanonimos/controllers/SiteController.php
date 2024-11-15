@@ -96,7 +96,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
 
             // files imageInput e filesInput
-            $imageInput = UploadedFile::getInstance($model, 'imageInput');
+            $imageInput = UploadedFile::getInstance($model, 'files');
             $filesInput = UploadedFile::getInstances($model, 'filesInput');
 
             // Define o diretório onde as imagens serão armazenadas

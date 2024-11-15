@@ -43,6 +43,10 @@ class Films extends \yii\db\ActiveRecord
             [['views'], 'integer'],
             [['files', 'img'], 'string'],
 
+            [['imageInput'], 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
+            [['filesInput'], 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true, 'maxFiles' => 10],
+       
+
         ];
     }
 
