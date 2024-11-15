@@ -132,6 +132,19 @@ $comece_aqui = [
         'link' => '/app/view/boas-vindas/comece-aqui/'
     ],
 
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0003.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+    [
+        'title' => 'Comece Aqui',
+        'img' => 'boas-vindas/comece-aqui/0004.jpg',
+        'description' => 'Descrição do filme ou série em destaque.',
+        'link' => '/app/view/boas-vindas/comece-aqui/'
+    ],
+
 ]
 
 ?>
