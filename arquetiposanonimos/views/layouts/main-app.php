@@ -60,7 +60,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     <?php $this->beginBody() ?>
     <!-- <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
     <li class="nav-item"><a class="nav-link" href="/">Site</a></li> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <a class="navbar-brand" href="/app">Arquetipos Anónimos</a>
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
