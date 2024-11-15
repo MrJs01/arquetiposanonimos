@@ -13,12 +13,10 @@
 <!-- Sobre -->
 <section class="about-section text-center w-100" id="about">
     <div class="container row gx-4 gx-lg-5 justify-content-center w-100">
-        <div class="col-lg-8">
-            <h2 class="text-white mb-4">Sobre o Projeto</h2>
-            <p class="text-white-50">
-                Arquétipos Anônimos é uma plataforma que reúne informações sobre tipologias, filosofia e psicologia analítica. Criado para armazenar e compartilhar conhecimentos sobre os arquétipos e o inconsciente coletivo.
-            </p>
-        </div>
+        <h2 class="text-white mb-4">Sobre o Projeto</h2>
+        <p class="text-white-50">
+            Arquétipos Anônimos é uma plataforma que reúne informações sobre tipologias, filosofia e psicologia analítica. Criado para armazenar e compartilhar conhecimentos sobre os arquétipos e o inconsciente coletivo.
+        </p>
     </div>
     <img class="img-fluid  rounded" src="/assets_main/img/wal3.jpeg" alt="Imagem representativa dos arquétipos" height="300" width="100%" />
 </section>
