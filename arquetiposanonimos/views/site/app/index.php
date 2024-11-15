@@ -102,19 +102,6 @@ $this->title = 'Netflix Clone';
     </div>
 </div>
 
-<?php
-
-$comece_aqui = [
-    [
-        'title' => 'Comece Aqui',
-        'img' => 'boas-vindas/comece-aqui/0001.jpg',
-        'description' => 'Descrição do filme ou série em destaque.',
-        'link' => '/app/view/boas-vindas_comece-aqui'
-    ],
- 
-]
-
-?>
 
 <!-- Três Swipers Menores -->
 <div class="container-fluid">
@@ -124,7 +111,7 @@ $comece_aqui = [
             <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel 
             ?>
                 <div class="swiper-slide" style="width: auto;">
-                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px;">
+                    <div class="card" onclick="location.href='<?= $filme['slug'] ?>'" style="width: 300px;">
                         <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $filme['title'] ?></h5>

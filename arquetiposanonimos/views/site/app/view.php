@@ -9,8 +9,8 @@ if (substr($file_name, -1) !== '/') {
     $file_name .= '/';
 }
 
-// $dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
-$dir = \Yii::getAlias('@app') . '/web/file_contents/' . $file_name;
+$dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
+// $dir = \Yii::getAlias('@app') . '/web/file_contents/' . $file_name;
 $files = scandir($dir);
 $files = array_splice($files, 2);
 

@@ -4,6 +4,9 @@
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
+// gii enable
+defined('YII_ENABLE_GII') or define('YII_ENABLE_GII', true);
+
 
 require __DIR__ . '/../vendor/autoload.php'; // já deve estar presente
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php'; // já deve estar presente
