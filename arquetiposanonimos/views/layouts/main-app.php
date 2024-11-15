@@ -51,16 +51,14 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Netflix Clone</a>
+            <a class="navbar-brand" href="/app/">Netflix Clone</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/app/">Home</a></li>
+                 
                 </ul>
             </div>
         </div>
