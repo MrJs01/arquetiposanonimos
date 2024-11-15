@@ -43,7 +43,7 @@ class Films extends \yii\db\ActiveRecord
             [['views'], 'integer'],
             [['files', 'img'], 'string'],
 
-            
+
 
         ];
     }
@@ -72,22 +72,34 @@ class Films extends \yii\db\ActiveRecord
     {
         // salvar em /web/uploads e verificar erros
         try {
-            if ($imageInput) {
-                $image = UploadedFile::getInstance($this, 'imgInput');
-                $image->saveAs('uploads/' . $image->baseName . '.' . $image->extension);
-                $this->img = 'uploads/' . $image->baseName . '.' . $image->extension;
+            // Verifica se a imagem principal foi recebida corretamente
+            if ($imageInput && isset($imageInput['tmp_name']) && $imageInput['tmp_name']) {
+                $image = UploadedFile::getInstanceByName('imageInput'); // Usando 'imageInput' diretamente
+                if ($image && $image->tempName) {
+                    $image->saveAs('uploads/' . $image->baseName . '.' . $image->extension);
+                    $this->img = 'uploads/' . $image->baseName . '.' . $image->extension;
+                } else {
+                    throw new \Exception("Erro ao carregar a imagem principal.");
+                }
             }
 
-            if ($filesInput) {
-                $files = UploadedFile::getInstances($this, 'filesInput');
+            // Verifica se os arquivos adicionais foram recebidos corretamente
+            if ($filesInput && isset($filesInput['tmp_name']) && is_array($filesInput['tmp_name'])) {
+                $files = UploadedFile::getInstancesByName('filesInput'); // Usando 'filesInput' diretamente
                 foreach ($files as $file) {
-                    $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
-                    $this->files .= 'uploads/' . $file->baseName . '.' . $file->extension . ',';
+                    if ($file && $file->tempName) {
+                        $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+                        $this->files .= 'uploads/' . $file->baseName . '.' . $file->extension . ',';
+                    } else {
+                        throw new \Exception("Erro ao carregar um dos arquivos.");
+                    }
                 }
             }
 
             return true;
         } catch (\Exception $e) {
+            // Captura e exibe o erro para depuração
+            Yii::error("Erro ao salvar os arquivos: " . $e->getMessage());
             return false;
         }
     }
