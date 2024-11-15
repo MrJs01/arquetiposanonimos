@@ -63,6 +63,13 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    public function actionApp()
+    {
+        // layout main
+        $this->layout = 'main-app';
+
+        return $this->render('app/index');
+    }
 
     /**
      * Login action.
