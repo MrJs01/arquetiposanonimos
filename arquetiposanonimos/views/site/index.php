@@ -11,7 +11,7 @@
 </header>
 
 <!-- Sobre -->
-<section class="about-section text-center" id="about">
+<section class="about-section text-center w-100" id="about">
     <div class=" px-4 px-lg-5">
         <div class="container row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8">
@@ -103,7 +103,7 @@
                             <h4 class="text-uppercase m-0">Diálogos | P.L.F | A.A</h4>
                             <hr class="my-4 mx-auto" />
                             <div class="small text-black-50">
-                                <p>Grupo na comunidade "<strong>Arquétipos Anônimos</strong>" · 475 membros</p>
+                                <p>Grupo na comunidade "<strong>Arquétipos Anônimos</strong>" · +475 membros</p>
                                 <p>Para diálogos sobre Psicologia Analítica, Literatura e Filosofia (P.L.F).</p>
                                 <a href="https://chat.whatsapp.com/Fx8yAbBQ8JtEqrg3wUb7Jq" target="_blank">Acesse o grupo principal do A.A.</a>
                             </div>
