@@ -154,14 +154,12 @@
         div.scrollLeft += scrollAmount;
     }
 
-    // Evento para botões "Play" e "More Info"
-    document.getElementById('playButton').addEventListener('click', function() {
-        console.log("Iniciar a reprodução...");
-        // Lógica para iniciar o vídeo ou algo mais
+    // colocar todos os scrolls para esquerda
+    document.querySelectorAll('.aror').forEach(aror => {
+        aror.addEventListener('click', () => {
+            aror.parentNode.scrollLeft = 0;
+        });
     });
 
-    document.getElementById('infoButton').addEventListener('click', function() {
-        console.log("Exibir mais informações...");
-        // Lógica para exibir informações adicionais
-    });
+    
 </script>
