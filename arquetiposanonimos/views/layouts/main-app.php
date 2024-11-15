@@ -68,9 +68,9 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
     <div class="container-fluid mt-4">
         <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+            <?= \yii\widgets\Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
         <?php endif ?>
-        <?= Alert::widget() ?>
+        <?= \yii\bootstrap5\Alert::widget() ?>
         <?= $content ?>
 
     </div>
