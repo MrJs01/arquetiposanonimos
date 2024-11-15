@@ -48,6 +48,7 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '/app' => 'site/app',
+                '/app/view/<file_name:.*>' => 'site/app-view',
             ],
         ],
     ],
