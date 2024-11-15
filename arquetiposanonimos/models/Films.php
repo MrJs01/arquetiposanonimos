@@ -68,45 +68,32 @@ class Films extends \yii\db\ActiveRecord
     }
 
 
-    public function saveFiles($imageInput, $filesInput)
+    public function saveFiles($mainImage, $additionalFiles)
     {
-        // salvar em /web/uploads e verificar erros
-        try {
-            // Verifica se a imagem principal foi recebida corretamente
-            if ($imageInput && isset($imageInput['tmp_name']) && $imageInput['tmp_name']) {
-                $image = UploadedFile::getInstanceByName('imageInput'); // Usando 'imageInput' diretamente
-                if ($image && $image->tempName) {
-                    // Gerar um nome único e aleatório para a imagem
-                    $uniqueName = uniqid('img_', true) . '.' . $image->extension;
-                    $image->saveAs('uploads/' . $uniqueName);
-                    $this->img = 'uploads/' . $uniqueName;
-                } else {
-                    throw new \Exception("Erro ao carregar a imagem principal.");
-                }
-            }
+        $savedFiles = [];
 
-            // Verifica se os arquivos adicionais foram recebidos corretamente
-            if ($filesInput && isset($filesInput['tmp_name']) && is_array($filesInput['tmp_name'])) {
-                $files = UploadedFile::getInstancesByName('filesInput'); // Usando 'filesInput' diretamente
-                foreach ($files as $file) {
-                    if ($file && $file->tempName) {
-                        // Gerar um nome único e aleatório para cada arquivo
-                        $uniqueName = uniqid('file_', true) . '.' . $file->extension;
-                        $file->saveAs('uploads/' . $uniqueName);
-                        $this->files .= 'uploads/' . $uniqueName . ',';
-                    } else {
-                        throw new \Exception("Erro ao carregar um dos arquivos.");
-                    }
-                }
+        // Salva a imagem principal
+        if ($mainImage) {
+            $mainImagePath = 'uploads/' . uniqid('img_', true) . '.jpg'; // ou qualquer outra extensão conforme o tipo de imagem
+            if (move_uploaded_file($mainImage, Yii::getAlias('@webroot') . '/' . $mainImagePath)) {
+                $savedFiles[] = $mainImagePath;
             }
-
-            return true;
-        } catch (\Exception $e) {
-            // Captura e exibe o erro para depuração
-            Yii::error("Erro ao salvar os arquivos: " . $e->getMessage());
-            return false;
         }
-    }
 
-    
+        // Salva os arquivos adicionais
+        foreach ($additionalFiles as $file) {
+            $filePath = 'uploads/' . uniqid('img_', true) . '.jpg'; // ou qualquer outra extensão conforme o tipo de imagem
+            if (move_uploaded_file($file, Yii::getAlias('@webroot') . '/' . $filePath)) {
+                $savedFiles[] = $filePath;
+            }
+        }
+
+        if (!empty($savedFiles)) {
+            // Atualiza o campo 'files' com os arquivos salvos
+            $this->files = implode(',', $savedFiles); // Salva como string separada por vírgulas
+            return true;
+        }
+
+        return false;
+    }
 }

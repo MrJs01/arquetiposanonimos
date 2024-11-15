@@ -105,8 +105,14 @@ class SiteController extends Controller
                 ? $_FILES['Films']['tmp_name']['imgInput'] : null;
 
             // Verifica se os arquivos adicionais foram enviados corretamente
-            $filesInput = isset($_FILES['Films']['name']['filesInput']) && $_FILES['Films']['error']['filesInput'][0] == UPLOAD_ERR_OK
-                ? $_FILES['Films']['tmp_name']['filesInput'] : [];
+            $filesInput = [];
+            if (isset($_FILES['Films']['name']['filesInput'])) {
+                foreach ($_FILES['Films']['name']['filesInput'] as $key => $value) {
+                    if ($_FILES['Films']['error']['filesInput'][$key] == UPLOAD_ERR_OK) {
+                        $filesInput[] = $_FILES['Films']['tmp_name']['filesInput'][$key];
+                    }
+                }
+            }
 
             // Salva os arquivos se foram enviados
             if ($model->saveFiles($imageInput, $filesInput) && $model->save()) {
