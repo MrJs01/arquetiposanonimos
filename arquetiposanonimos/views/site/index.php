@@ -104,7 +104,7 @@
         </div>
         <!-- Links para grupos -->
         <div class="contact-links mt-5">
-            <h4 class="text-center text-white">Grupos e Links Importantes</h4>
+            <h4 class="text-center text-white mb-4">Grupos e Links Importantes</h4>
             <div class="row gx-4 gx-lg-5">
                 <!-- Grupo Arquitetos Tipológicos -->
                 <div class="col-md-6 mb-3">
