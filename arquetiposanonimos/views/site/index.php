@@ -31,7 +31,7 @@
         <!-- Projeto Destaque -->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center rounded" style="background-color: white;">
             <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal4.jpeg" alt="Imagem de Arquétipos" /></div>
-            <div class="col-xl-4 col-lg-5">
+            <div class="col-xl-4 col-lg-5 p-3">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Exploração dos Arquétipos</h4>
                     <p class="text-black-50 mb-0">Uma coleção completa sobre arquétipos junguianos e sua representação no inconsciente coletivo.</p>
