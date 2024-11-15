@@ -1,6 +1,6 @@
 <?php
 
-$env = parse_ini_file('/../.env');
+$env = parse_ini_file(\dirname(__DIR__) . '/../.env');
 
 return [
     'class' => 'yii\db\Connection',
