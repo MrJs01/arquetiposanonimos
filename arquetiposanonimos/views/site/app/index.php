@@ -162,13 +162,13 @@ $films = \app\models\Films::find()->all();
         {
             title: "IA e Audiobooks",
             description: "Uso de IA para gerar audiobooks a partir de textos, permitindo uma experiência imersiva de aprendizagem e estudo da psicologia analítica.",
-            img: "/assets_main/img/wal2.jpeg", // Imagem representando IA ou áudio
+            img: "/assets_main/img/wal2.png", // Imagem representando IA ou áudio
             bgColor: "#2b2b2b"
         },
         {
             title: "Conteúdo Interativo",
             description: "Conteúdos interativos como quizzes, fóruns de discussão e artigos multimídia para facilitar o aprendizado de psicologia e filosofia.",
-            img: "/assets_main/img/wal1.jpeg", // Imagem de conteúdo interativo
+            img: "/assets_main/img/wal1.png", // Imagem de conteúdo interativo
             bgColor: "#3c3c3c"
         },
         {
