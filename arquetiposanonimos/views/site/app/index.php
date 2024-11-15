@@ -97,7 +97,7 @@
             <div class="second-all-movie-div" id="div2-width">
                 <div class="control-z">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/controlz.jpg?raw=true" alt="contro z">
-                    
+
                 </div>
                 <div class="crazy-rich-asians">
                     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/crazy%20rich%20asian.webp" alt="crazy-rich-asians">
@@ -308,40 +308,3 @@
             </div>
     </footer>
 </section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const nextButton = document.querySelector('.aror .next');
-        const prevButton = document.querySelector('.aror .prev');
-        const movieDiv = document.querySelector('.netflix-all-movie-div');
-        let currentIndex = 0;
-        const movieItems = document.querySelectorAll('.netflix-all-movie-div .image');
-        const totalMovies = movieItems.length;
-
-        // Função para atualizar a visibilidade das imagens
-        function updateCarousel() {
-            // Ocultar todas as imagens
-            movieItems.forEach((item, index) => {
-                item.style.display = 'none';
-            });
-
-            // Exibir a imagem atual
-            movieItems[currentIndex].style.display = 'block';
-        }
-
-        // Lógica para o botão "next"
-        nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % totalMovies; // Vai para o próximo, se for o último volta para o primeiro
-            updateCarousel();
-        });
-
-        // Lógica para o botão "prev"
-        prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + totalMovies) % totalMovies; // Vai para o anterior, se for o primeiro vai para o último
-            updateCarousel();
-        });
-
-        // Inicializar o carrossel exibindo a primeira imagem
-        updateCarousel();
-    });
-</script>
