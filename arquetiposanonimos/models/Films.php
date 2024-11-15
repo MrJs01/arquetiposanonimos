@@ -39,21 +39,12 @@ class Films extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'description', 'slug', 'views'], 'required'],
-            [['title', 'description', 'files', 'slug', 'img'], 'string'],
+            [['title', 'description', 'slug'], 'string'],
             [['views'], 'integer'],
-            // Verifica se os arquivos de imagem foram enviados, caso contrário, não é necessário validar
+
+            // Validações para os uploads de arquivos
             [['filesInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, gif', 'maxFiles' => 10],
-            [['imgInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
-
-            // Validação condicional para o campo 'files'
-            [['files'], 'required', 'when' => function ($model) {
-                return !empty($model->filesInput); // Só exige 'files' se houver arquivos enviados
-            }, 'message' => 'Files cannot be blank.'],
-
-            // Validação condicional para o campo 'img'
-            [['img'], 'required', 'when' => function ($model) {
-                return !empty($model->imgInput); // Só exige 'img' se houver imagem enviada
-            }, 'message' => 'Image (main) cannot be blank.'],
+            [['imgInput'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg, jpeg'], // A imagem principal será obrigatória
         ];
     }
 
@@ -65,7 +56,15 @@ class Films extends \yii\db\ActiveRecord
     public function uploadFiles()
     {
         if ($this->validate()) {
-            // Para as imagens dos filmes
+            // Para a imagem principal
+            if ($this->imgInput) {
+                $imgPath = 'uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
+                if ($this->imgInput->saveAs($imgPath)) {
+                    $this->img = $imgPath; // Salva o caminho da imagem principal
+                }
+            }
+
+            // Para os arquivos de imagem múltiplos
             if ($this->filesInput) {
                 $filePaths = [];
                 foreach ($this->filesInput as $file) {
@@ -74,18 +73,12 @@ class Films extends \yii\db\ActiveRecord
                         $filePaths[] = $filePath;
                     }
                 }
-                $this->files = implode(',', $filePaths);
+                $this->files = implode(',', $filePaths); // Salva os caminhos dos arquivos
             }
 
-            // Para a imagem principal
-            if ($this->imgInput) {
-                $imgPath = 'uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
-                if ($this->imgInput->saveAs($imgPath)) {
-                    $this->img = $imgPath;
-                }
-            }
             return true;
         }
+
         return false;
     }
 
