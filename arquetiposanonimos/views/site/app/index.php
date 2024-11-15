@@ -103,7 +103,9 @@ $this->title = 'Netflix Clone';
 </div>
 
 <?php
-$comece_aqui = [];
+$films = \app\models\Films::find()->all();
+
+
 ?>
 
 
@@ -112,14 +114,14 @@ $comece_aqui = [];
     <h2 class="text-white m-5">Filmes em Destaque</h2>
     <div class="swiper mySwiper" id="swiper-destaques">
         <div class="swiper-wrapper">
-            <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel 
+            <?php foreach ($films as $film): // Criando 8 filmes por carrossel 
             ?>
                 <div class="swiper-slide" style="width: auto;">
-                    <div class="card" onclick="location.href='<?= $filme['slug'] ?>'" style="width: 300px;">
-                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" style="object-fit: cover;">
+                    <div class="card" onclick="location.href='<?= $film['slug'] ?>'" style="width: 300px;">
+                        <img src="/file_contents/<?= $film['img'] ?>" class="card-img-top" alt="Filme" style="object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $filme['title'] ?></h5>
-                            <p class="card-text"><?= $filme['description'] ?></p>
+                            <h5 class="card-title"><?= $film['title'] ?></h5>
+                            <p class="card-text"><?= $film['description'] ?></p>
                         </div>
                     </div>
                 </div>
