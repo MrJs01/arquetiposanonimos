@@ -158,11 +158,25 @@ $comece_aqui = [
     <script>
         var swiper_destaques = new Swiper("#swiper-destaques", {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 20,
             loop: true,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: $("#swiper-destaques").querySelector('.swiper-button-next'),
+                prevEl: $("#swiper-destaques").querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1440: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
             }
         });
     </script>
