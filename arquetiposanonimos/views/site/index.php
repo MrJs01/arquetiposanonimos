@@ -94,7 +94,8 @@
 
 <!-- Contato -->
 <section class="contact-section bg-black" id="contact">
-    <div class="container px-lg-5 p-3 rounded" style="background-color: black;">
+    <!-- background blac meio trasparente -->
+    <div class="container px-lg-5 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
 
         <!-- Redes sociais -->
         <div class="social d-flex justify-content-center rounded">
