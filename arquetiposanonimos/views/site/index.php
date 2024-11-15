@@ -21,7 +21,7 @@
                 </p>
             </div>
         </div>
-        <img class="img-fluid" src="/assets_main/img/wal1.png" alt="Imagem representativa dos arquétipos" />
+        <img class="img-fluid" src="/assets_main/img/wal3.png" alt="Imagem representativa dos arquétipos" height="300" />
     </div>
 </section>
 
