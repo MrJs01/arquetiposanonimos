@@ -5,13 +5,13 @@
 </div>
 
 <div class="between-img-div">
-    <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/between-1.webp" class="between-img" alt="">
+    <img src="/assets_main/img/wal3.jpeg" class="between-img" alt="">
 </div>
 
 <div class="logo-and-text">
     <div class="titleWrapper">
         <div class="billboard-title">
-            <img class="title-logo" src="/assets_main/img/wal3.jpeg" alt="Netflix logo">
+            <img class="title-logo" src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/netflixsvg.webp" alt="Netflix logo">
         </div>
     </div>
 
