@@ -91,29 +91,39 @@ class SiteController extends Controller
     public function actionAdminFilm($id = null)
     {
         $model = $id ? Films::findOne($id) : new Films();
-    
+
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
 
             // files imageInput e filesInput
             $imageInput = UploadedFile::getInstance($model, 'imageInput');
             $filesInput = UploadedFile::getInstances($model, 'filesInput');
-    
+
+            // Define o diretório onde as imagens serão armazenadas
+            $uploadPath = Yii::getAlias('@webroot/uploads/films/');
+
             // Verifica se foi enviado uma imagem principal
             if ($imageInput) {
-                $model->img = $imageInput->baseName . '.' . $imageInput->extension;
+                $imageName = $imageInput->baseName . '.' . $imageInput->extension;
+                // Salva a imagem principal
+                if ($imageInput->saveAs($uploadPath . $imageName)) {
+                    $model->img = $imageName;
+                }
             }
-    
+
             // Verifica se foram enviados arquivos de imagem
             if ($filesInput) {
                 $model->files = [];
                 foreach ($filesInput as $file) {
-                    $model->files[] = $file->baseName . '.' . $file->extension;
+                    $fileName = $file->baseName . '.' . $file->extension;
+                    // Salva as imagens adicionais
+                    if ($file->saveAs($uploadPath . $fileName)) {
+                        $model->files[] = $fileName;
+                    }
                 }
             }
 
-    
-            // Tenta fazer o upload dos arquivos
+            // Tenta salvar o modelo no banco de dados
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
@@ -121,10 +131,9 @@ class SiteController extends Controller
                 Yii::$app->session->setFlash('error', 'There was an error saving the film. Erros: ' . json_encode($model->errors));
             }
         }
-    
+
         return $this->render('app/admin/film', [
             'model' => $model,
         ]);
     }
-    
 }
