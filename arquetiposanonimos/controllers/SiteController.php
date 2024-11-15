@@ -129,6 +129,8 @@ class SiteController extends Controller
             }
 
             // Tenta salvar o modelo
+            // remover ultima imagem do imgs
+            $model->files = substr($model->files, 0, -1);
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
