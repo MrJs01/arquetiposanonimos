@@ -4,7 +4,11 @@
 /** @var string $content */
 
 use app\assets\AppAsset;
+use app\widgets\Alert;
+use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
 
@@ -68,10 +72,10 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
     <div class="container-fluid mt-4">
         <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= \yii\widgets\Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
         <?php endif ?>
         <?= $content ?>
-        <?= \yii\bootstrap5\Alert::widget() ?>
+        <?= Alert::widget() ?>
 
     </div>
 
