@@ -153,7 +153,7 @@ $films = \app\models\Films::find()->all();
 
 <script>
     // Array de filmes em destaque
-    const informacoesProjeto = [{
+    const destaques = [{
             title: "Tipologia Psicológica de Carl Jung",
             description: "Uma plataforma dedicada ao estudo da Psicologia Analítica de Carl Jung, abordando arquétipos, tipologias psicológicas e filosofia com conteúdo multimodal (textos, áudios e vídeos).",
             img: "https://placehold.co/1200x500/ff0000/ffffff", // Imagem ilustrativa do projeto
