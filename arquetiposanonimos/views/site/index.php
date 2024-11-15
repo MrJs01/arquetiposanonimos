@@ -74,7 +74,7 @@
     <div class="container px-4 px-lg-5">
    
         <!-- Redes sociais -->
-        <div class="social d-flex justify-content-center rounded" style="background-color: white;">
+        <div class="social d-flex justify-content-center rounded" style="background-color: black;">
             <a class="mx-2" href="https://www.instagram.com/arquetiposanonimos/"><i class="fab fa-instagram"></i></a>
             <a class="mx-2" href="https://www.youtube.com/@Arqu%C3%A9tiposAn%C3%B4nimos"><i class="fab fa-youtube"></i></a>
         </div>
