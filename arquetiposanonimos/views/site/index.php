@@ -1,4 +1,4 @@
-<header class="masthead" style"background-image: url('/assets_main/img/wal1.png')">
+<header class="masthead" style="background-image: url('/assets_main/img/wal1.png')">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
@@ -18,7 +18,7 @@
             Arquétipos Anônimos é uma plataforma que reúne informações sobre tipologias, filosofia e psicologia analítica. Criado para armazenar e compartilhar conhecimentos sobre os arquétipos e o inconsciente coletivo.
         </p>
     </div>
-    <img class="img-fluid  rounded" src="/assets_main/img/wal3.jpeg" alt="Imagem representativa dos arquétipos" height="300" width="100%" />
+    <img class="img-fluid rounded" src="/assets_main/img/wal3.jpeg" alt="Imagem representativa dos arquétipos" height="300" width="100%" />
 </section>
 
 <!-- Projetos -->
@@ -26,7 +26,9 @@
     <div class="container px-4 px-lg-5">
         <!-- Projeto Destaque -->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center rounded" style="background-color: white;">
-            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal4.jpeg" alt="Imagem de Arquétipos" /></div>
+            <div class="col-xl-8 col-lg-7">
+                <img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal4.jpeg" alt="Imagem de Arquétipos" />
+            </div>
             <div class="col-xl-4 col-lg-5 p-3">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Exploração dos Arquétipos</h4>
@@ -36,7 +38,9 @@
         </div>
         <!-- Projeto 1 -->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal5.jpeg" alt="Imagem de Tipologias" /></div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/assets_main/img/wal5.jpeg" alt="Imagem de Tipologias" />
+            </div>
             <div class="col-lg-6">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
@@ -50,7 +54,9 @@
         </div>
         <!-- Projeto 2 -->
         <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal6.jpeg" alt="Imagem de Filosofia" /></div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/assets_main/img/wal6.jpeg" alt="Imagem de Filosofia" />
+            </div>
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
@@ -68,7 +74,6 @@
 <!-- Contato -->
 <section class="contact-section bg-black" id="contact">
     <div class="container px-lg-5 p-3 rounded" style="background-color: black;">
-
         <!-- Redes sociais -->
         <div class="social d-flex justify-content-center rounded">
             <a class="mx-2" href="https://www.instagram.com/arquetiposanonimos/"><i class="fab fa-instagram"></i></a>
@@ -106,7 +111,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
