@@ -1,6 +1,3 @@
-<title>Netflix Clone</title>
-
-
 <!-- notification nav -->
 <div class="float-op" style="float: right;">
     <div class="search"></div>
@@ -397,48 +394,37 @@
 </section>
 
 <script>
-    // JavaScript for Carousel/Slider navigation
+    // Exemplo de rolagem automática para mostrar mais conteúdo
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.item'); // A classe 'item' representa cada conteúdo na sua tela
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Get the navigation buttons and the items to slide
-    const prevBtns = document.querySelectorAll('.prev');
-    const nextBtns = document.querySelectorAll('.next');
-    const sliders = document.querySelectorAll('.all-movie-div, .second-all-movie-div, .netflix-all-movie-div, .top10-all-movie-div, .second-div-list');
-
-    // Function to slide the images left (prev) or right (next)
-    function moveSlide(slider, direction) {
-        const slideWidth = slider.querySelector('div').offsetWidth; // Assuming all images have the same width
-        const currentTransform = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
-        
-        // Determine new position based on direction
-        const newPosition = direction === 'next' ? currentTransform - slideWidth : currentTransform + slideWidth;
-
-        // Apply the transform to create sliding effect
-        slider.style.transition = 'transform 0.5s ease';
-        slider.style.transform = `translateX(${newPosition}px)`;
+    function loadMoreItems() {
+        if (currentIndex < items.length) {
+            items[currentIndex].style.display = 'block'; // Mostrar o item
+            currentIndex++;
+        }
     }
 
-    // Add event listeners to the "next" and "prev" buttons
-    prevBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const parentSlider = btn.closest('.aror').previousElementSibling;  // Find the slider container
-            moveSlide(parentSlider, 'prev');
-        });
+    // Evento de rolar para baixo
+    window.onscroll = () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            loadMoreItems(); // Carregar mais conteúdo quando o usuário chegar ao final da página
+        }
+    };
+
+    // Função para iniciar ao carregar a página
+    document.addEventListener("DOMContentLoaded", function() {
+        loadMoreItems(); // Carrega os primeiros itens ao carregar a página
     });
 
-    nextBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const parentSlider = btn.closest('.aror').previousElementSibling;  // Find the slider container
-            moveSlide(parentSlider, 'next');
-        });
-    });
+    // Exemplo de interatividade com o menu dropdown
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.dropdown-content2');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
 
-    // Optionally, you could add automatic sliding with setInterval
-    // setInterval(() => {
-    //     nextBtns.forEach((btn) => {
-    //         btn.click(); // Trigger next button click every few seconds
-    //     });
-    // }, 5000); // Slide every 5 seconds
-});
+    // Associando a função ao evento de clique no botão
+    document.querySelector('.dropbtn').addEventListener('click', toggleDropdown);
 
+    // Adicionar mais interações aqui conforme necessário
 </script>
