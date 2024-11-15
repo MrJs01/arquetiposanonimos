@@ -5,8 +5,7 @@ return [
     'dsn' => getenv('DB_DSN'),
     'username' => getenv('DB_USERNAME'),
     'password' => getenv('DB_PASSWORD'),
-    'charset' => getenv('DB_CHARSET'),
-
+    'charset' => 'utf8',      // Charset desejado
     // Schema cache options (for production environment)
     //'enableSchemaCache' => true,
     //'schemaCacheDuration' => 60,
