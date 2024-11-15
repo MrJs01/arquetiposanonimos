@@ -77,8 +77,8 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev" onclick="scrollCarrousel('div1-width', -300)">&#10094;</a>
-        <a class="next" onclick="scrollCarrousel('div1-width', 300)">&#10095;</a>
+        <a class="prev" onclick="scrollCarrousel('div1-width', 300)">&#10094;</a>
+        <a class="next" onclick="scrollCarrousel('div1-width', -300)">&#10095;</a>
     </div>
 </section>
 
@@ -122,8 +122,8 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev" onclick="scrollCarrousel('div2-width', -300)">&#10094;</a>
-        <a class="next" onclick="scrollCarrousel('div2-width', 300)">&#10095;</a>
+        <a class="prev" onclick="scrollCarrousel('div2-width', 300)">&#10094;</a>
+        <a class="next" onclick="scrollCarrousel('div2-width', -300)">&#10095;</a>
     </div>
 </section>
 <!-- ... outras seções de carrossel e conteúdos -->
