@@ -87,7 +87,7 @@
 <section class="all-drama">
     <div class="tv-dramas" id="dramas">
         <h2 class="tvd-h2">Trending Now</h2>
-        <div class="div-width" id="div1-width">
+        <div class="div-width" id="div2-width">
             <div class="all-movie-div">
                 <!-- Imagens do carrossel de dramas -->
                 <div class="orange">
@@ -122,8 +122,8 @@
         </div>
     </div>
     <div class="aror">
-        <a class="prev" onclick="scrollCarrousel('div1-width', -300)">&#10094;</a>
-        <a class="next" onclick="scrollCarrousel('div1-width', 300)">&#10095;</a>
+        <a class="prev" onclick="scrollCarrousel('div2-width', -300)">&#10094;</a>
+        <a class="next" onclick="scrollCarrousel('div2-width', 300)">&#10095;</a>
     </div>
 </section>
 <!-- ... outras seções de carrossel e conteúdos -->
