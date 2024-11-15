@@ -144,7 +144,7 @@ $comece_aqui = [
             <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel
             ?>
                 <div class="swiper-slide">
-                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 600px; height: 400px;">
+                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px; height: 200px;">
                         <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="200" width="300" style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $filme['title'] ?> </h5>
