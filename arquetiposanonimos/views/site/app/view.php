@@ -3,16 +3,8 @@
 // pegar imagens do arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/0001.jpg, 0022.jpg, 0033.jpg
 
 
-$file_name = str_replace('_', '/', $file_name);
-// verificar se termina com /
-if (substr($file_name, -1) !== '/') {
-    $file_name .= '/';
-}
-
-$dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
-// $dir = \Yii::getAlias('@app') . '/web/file_contents/' . $file_name;
-$files = scandir($dir);
-$files = array_splice($files, 2);
+$model = \app\models\Films::find()->where(['slug' => $slug])->one();
+$files = explode(',', $model->files);
 
 
 ?>
@@ -24,7 +16,7 @@ $files = array_splice($files, 2);
         <div class="swiper-wrapper">
             <?php foreach ($files as $file): ?>
                 <div class="swiper-slide">
-                    <img src="/file_contents/boas-vindas/comece-aqui/<?= $file ?>" alt="<?= $file ?>" style="object-fit: contain;">
+                    <img src="/<?= $file ?>" alt="<?= $file ?>" style="object-fit: contain;">
                 </div>
             <?php endforeach; ?>
         </div>

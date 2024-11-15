@@ -76,13 +76,13 @@ class SiteController extends Controller
     }
 
     // app-view
-    public function actionView($file_name)
+    public function actionView($slug)
     {
         // layout main
         $this->layout = 'main-app';
 
         return $this->render('app/view', [
-            'file_name' => $file_name
+            'slug' => $slug
         ]);
     }
 

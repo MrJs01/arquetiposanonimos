@@ -117,7 +117,7 @@ $films = \app\models\Films::find()->all();
             <?php foreach ($films as $film): // Criando 8 filmes por carrossel 
             ?>
                 <div class="swiper-slide" style="width: auto;">
-                    <div class="card" onclick="location.href='<?= $film['slug'] ?>'" style="width: 300px;">
+                    <div class="card" onclick="location.href='/app/view/<?= $film['slug'] ?>'" style="width: 300px;">
                         <img src="/<?= $film['img'] ?>" class="card-img-top" alt="Filme" style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $film['title'] ?></h5>
