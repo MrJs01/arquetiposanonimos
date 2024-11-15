@@ -95,23 +95,18 @@ class SiteController extends Controller
 
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
-
-            // Verifica a nova ordem dos arquivos
-            $reorderedFiles = Yii::$app->request->post('reordered_files');
-
-            if ($reorderedFiles) {
-                // Atualiza a coluna 'files' com a ordem dos arquivos
-                $model->files = implode(',', $reorderedFiles);
+            // Recupera a nova ordem das imagens
+            $newOrder = Yii::$app->request->post('newOrder', '');
+            if ($newOrder) {
+                // Atualiza a ordem das imagens no campo 'files'
+                $model->files = $newOrder;
             }
 
-            // files imageInput e filesInput
-            $imageInput = $_FILES['imageInput'];
+            // Carrega e salva os arquivos
+            $imageInput = $_FILES['imgInput'];
             $filesInput = $_FILES['filesInput'];
 
-            // salvar os arquivos
-            $model->saveFiles($imageInput, $filesInput);
-
-            if ($model->save()) {
+            if ($model->saveFiles($imageInput, $filesInput) && $model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {

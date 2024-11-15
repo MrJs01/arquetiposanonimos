@@ -1,74 +1,63 @@
 <?php
-// Aqui você pode exibir as imagens salvas no banco de dados
-$files = explode(',', $model->files); // Quebrando os caminhos das imagens em um array
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+$this->title = $model->isNewRecord ? 'Create Film' : 'Edit Film';
 ?>
-<div class="form-group">
-    <label>Reordenar Imagens</label>
-    <ul id="sortable">
-        <?php foreach ($files as $file): ?>
-            <?php if ($file): ?>
-                <li class="sortable-item" data-file="<?= $file ?>" draggable="true">
-                    <img src="<?= Yii::getAlias('@web') . '/' . $file ?>" width="100" alt="image">
-                    <input type="hidden" name="reordered_files[]" value="<?= $file ?>">
-                </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
+
+<h1><?= Html::encode($this->title) ?></h1>
+
+<?php $form = ActiveForm::begin([
+    'options' => ['enctype' => 'multipart/form-data'], // Necessário para uploads de arquivos
+]); ?>
+
+<?= $form->field($model, 'title') ?>
+<?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+<?= $form->field($model, 'slug') ?>
+<?= $form->field($model, 'views') ?>
+
+<!-- Imagem principal -->
+<?= $form->field($model, 'imgInput')->fileInput() ?>
+
+<!-- Arquivos de imagem múltiplos -->
+<?= $form->field($model, 'filesInput[]')->fileInput(['multiple' => true]) ?>
+
+<!-- Este campo armazenará a nova ordem das imagens -->
+<?= Html::hiddenInput('newOrder', '', ['id' => 'newOrder']) ?>
+
+<!-- Container para as imagens que serão arrastadas -->
+<div id="sortable-images">
+    <?php foreach (explode(',', $model->files) as $file): ?>
+        <?php if (!empty($file)): ?>
+            <div class="sortable-item" data-id="<?= $file ?>">
+                <img src="<?= Yii::$app->urlManager->baseUrl . '/' . $file ?>" alt="Image" style="width: 100px; height: 100px;">
+                <p><?= basename($file) ?></p>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
 </div>
 
+<div class="form-group">
+    <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Save', ['class' => 'btn btn-primary']) ?>
+</div>
+
+<?php ActiveForm::end(); ?>
+
+<!-- Adicionar o script do SortableJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
 <script>
-    // Função que inicializa a funcionalidade de arrastar e soltar
-    const sortableList = document.getElementById('sortable');
-
-    // Adicionando eventos de drag and drop
-    let draggedItem = null;
-
-    // Quando o item começa a ser arrastado
-    sortableList.addEventListener('dragstart', function(event) {
-        draggedItem = event.target;
-        draggedItem.style.opacity = '0.5'; // Tornar o item semi-transparente enquanto arrasta
-    });
-
-    // Quando o item termina de ser arrastado
-    sortableList.addEventListener('dragend', function() {
-        draggedItem.style.opacity = '1'; // Restaura a opacidade do item
-        draggedItem = null;
-    });
-
-    // Quando um item é arrastado para um item de destino
-    sortableList.addEventListener('dragover', function(event) {
-        event.preventDefault(); // Permite a operação de arrastar
-        const targetItem = event.target;
-
-        // Só pode ser um item de lista (não o próprio <ul>)
-        if (targetItem && targetItem !== draggedItem && targetItem.classList.contains('sortable-item')) {
-            const bounding = targetItem.getBoundingClientRect();
-            const offset = bounding.top + bounding.height / 2;
-            if (event.clientY - offset > 0) {
-                targetItem.style['border-bottom'] = 'solid 2px #ccc';
-                targetItem.style['border-top'] = '';
-            } else {
-                targetItem.style['border-top'] = 'solid 2px #ccc';
-                targetItem.style['border-bottom'] = '';
+    // Inicializa o Sortable no container das imagens
+    var sortable = new Sortable(document.getElementById('sortable-images'), {
+        animation: 150,
+        onEnd(evt) {
+            // Envia a nova ordem das imagens para o formulário quando o usuário termina de arranjar
+            let newOrder = [];
+            const items = evt.from.children;
+            for (let i = 0; i < items.length; i++) {
+                newOrder.push(items[i].getAttribute('data-id')); // Pega o ID da imagem
             }
-        }
-    });
-
-    // Quando um item é solto dentro da lista
-    sortableList.addEventListener('drop', function(event) {
-        event.preventDefault();
-        const targetItem = event.target;
-        if (targetItem && targetItem !== draggedItem && targetItem.classList.contains('sortable-item')) {
-            // Troca as posições dos itens
-            const bounding = targetItem.getBoundingClientRect();
-            const offset = bounding.top + bounding.height / 2;
-            if (event.clientY - offset > 0) {
-                sortableList.insertBefore(draggedItem, targetItem.nextSibling);
-            } else {
-                sortableList.insertBefore(draggedItem, targetItem);
-            }
-            targetItem.style['border-bottom'] = '';
-            targetItem.style['border-top'] = '';
+            document.getElementById('newOrder').value = newOrder.join(',');
         }
     });
 </script>
