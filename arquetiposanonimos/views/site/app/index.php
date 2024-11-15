@@ -174,7 +174,6 @@ $comece_aqui = [
         var swiper_destaques = new Swiper("#swiper-destaques", {
             // Deixar slides lado a lado automaticamente
             spaceBetween: 15, // Espaçamento entre os slides
-            loop: true, // Loop infinito
 
             slidesPerView: 'auto', // Deixa os slides ajustarem o tamanho automaticamente
 
