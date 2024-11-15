@@ -90,6 +90,7 @@ class SiteController extends Controller
 
     public function actionAdminFilm($id = null)
     {
+        $this->layout = 'main-app';
         $model = $id ? Films::findOne($id) : new Films();
 
         // Verifica se é um POST request
