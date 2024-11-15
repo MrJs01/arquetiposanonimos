@@ -30,7 +30,7 @@ $this->title = $model->isNewRecord ? 'Create Film' : 'Edit Film';
     <?php foreach (explode(',', $model->files) as $file): ?>
         <?php if (!empty($file)): ?>
             <div class="sortable-item" data-id="<?= $file ?>">
-                <img src="<?= Yii::$app->urlManager->baseUrl . '/' . $file ?>" alt="Image" style="width: 100px; height: 100px;">
+                <img src="<?= Yii::$app->urlManager->baseUrl . '/' . $file ?>" alt="Image" style="width: 100px; height: 100px; object-fit: contain;">
                 <p><?= basename($file) ?></p>
             </div>
         <?php endif; ?>
