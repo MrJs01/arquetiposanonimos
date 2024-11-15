@@ -21,7 +21,7 @@
                 </p>
             </div>
         </div>
-        <img class="img-fluid" src="assets_main/img/wal1.png" alt="Imagem representativa dos arquétipos" />
+        <img class="img-fluid" src="/assets_main/img/wal1.png" alt="Imagem representativa dos arquétipos" />
     </div>
 </section>
 
@@ -30,7 +30,7 @@
     <div class="container px-4 px-lg-5">
         <!-- Projeto Destaque -->
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets_main/img/wal1.png" alt="Imagem de Arquétipos" /></div>
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/assets_main/img/wal1.png" alt="Imagem de Arquétipos" /></div>
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Exploração dos Arquétipos</h4>
@@ -40,7 +40,7 @@
         </div>
         <!-- Projeto 1 -->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="assets_main/img/wal1.png" alt="Imagem de Tipologias" /></div>
+            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal1.png" alt="Imagem de Tipologias" /></div>
             <div class="col-lg-6">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
@@ -54,7 +54,7 @@
         </div>
         <!-- Projeto 2 -->
         <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="assets_main/img/wal1.png" alt="Imagem de Filosofia" /></div>
+            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal1.png" alt="Imagem de Filosofia" /></div>
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
