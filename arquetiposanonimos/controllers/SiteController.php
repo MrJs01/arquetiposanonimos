@@ -163,7 +163,7 @@ class SiteController extends Controller
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error saving the film.');
+                Yii::$app->session->setFlash('error', 'There was an error saving the film. Errors: ' . implode(', ', $model->getErrors()));
             }
         }
 
