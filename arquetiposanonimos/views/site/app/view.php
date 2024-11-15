@@ -25,6 +25,8 @@ $files = explode(',', $model->files);
             <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </div>
 
@@ -50,6 +52,10 @@ $files = explode(',', $model->files);
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
    
     });
