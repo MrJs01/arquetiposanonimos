@@ -1,10 +1,12 @@
 <?php
 
+$env = parse_ini_file('.env');
+
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=u750615799_arquetiposanon',
-    'username' => getenv('DB_USERNAME'),
-    'password' => getenv('DB_PASSWORD'),
+    'username' => $env['DB_USERNAME'],
+    'password' => $env['DB_PASSWORD'],
     'charset' => 'utf8',      // Charset desejado
     // Schema cache options (for production environment)
     //'enableSchemaCache' => true,
