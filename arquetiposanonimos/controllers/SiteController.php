@@ -145,4 +145,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+
+    // '/app/admin/films' => 'site/admin-films',
+
+    public function actionAdminFilms()
+    {
+        $this->layout = 'main-app';
+        $films = Films::find()->all();
+        return $this->render('app/admin/films-list', [
+            'films' => $films
+        ]);
+    }
 }

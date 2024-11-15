@@ -53,6 +53,8 @@ $config = [
 
                 '/app/admin/film' => 'site/admin-film',
                 '/app/admin/film/<id>' => 'site/admin-film',
+                // films-list.php
+                '/app/admin/films' => 'site/admin-films',
             ],
         ],
     ],
