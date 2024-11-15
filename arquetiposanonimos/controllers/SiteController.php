@@ -87,13 +87,11 @@ class SiteController extends Controller
     }
 
 
-
     public function actionAdminFilm($id = null)
     {
         $this->layout = 'main-app';
         $model = $id ? Films::findOne($id) : new Films();
 
-        // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
             // Recupera a nova ordem das imagens
             $newOrder = Yii::$app->request->post('newOrder', '');
@@ -102,15 +100,20 @@ class SiteController extends Controller
                 $model->files = $newOrder;
             }
 
-            // Carrega e salva os arquivos
-            $imageInput = $_FILES['imgInput'];
-            $filesInput = $_FILES['filesInput'];
+            // Verifica se a imagem principal foi enviada corretamente
+            $imageInput = isset($_FILES['Films']['name']['imgInput']) && $_FILES['Films']['error']['imgInput'] == UPLOAD_ERR_OK
+                ? $_FILES['Films']['tmp_name']['imgInput'] : null;
 
+            // Verifica se os arquivos adicionais foram enviados corretamente
+            $filesInput = isset($_FILES['Films']['name']['filesInput']) && $_FILES['Films']['error']['filesInput'][0] == UPLOAD_ERR_OK
+                ? $_FILES['Films']['tmp_name']['filesInput'] : [];
+
+            // Salva os arquivos se foram enviados
             if ($model->saveFiles($imageInput, $filesInput) && $model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error saving the film. Erros: ' . json_encode($model->errors));
+                Yii::$app->session->setFlash('error', 'There was an error saving the film. Errors: ' . json_encode($model->errors));
             }
         }
 
