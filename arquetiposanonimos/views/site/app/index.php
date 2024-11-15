@@ -394,37 +394,54 @@
 </section>
 
 <script>
-    // Exemplo de rolagem automática para mostrar mais conteúdo
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.item'); // A classe 'item' representa cada conteúdo na sua tela
+// Função para navegação no carrossel
+document.querySelectorAll('.aror .prev').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const carrousel = event.target.closest('.aror').previousElementSibling;
+        const items = carrousel.querySelectorAll('img');
+        const currentTransform = getComputedStyle(carrousel).transform;
+        let currentPosition = currentTransform === 'none' ? 0 : parseInt(currentTransform.split(',')[4]);
 
-    function loadMoreItems() {
-        if (currentIndex < items.length) {
-            items[currentIndex].style.display = 'block'; // Mostrar o item
-            currentIndex++;
-        }
-    }
-
-    // Evento de rolar para baixo
-    window.onscroll = () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            loadMoreItems(); // Carregar mais conteúdo quando o usuário chegar ao final da página
-        }
-    };
-
-    // Função para iniciar ao carregar a página
-    document.addEventListener("DOMContentLoaded", function() {
-        loadMoreItems(); // Carrega os primeiros itens ao carregar a página
+        // Mover a imagem para a esquerda
+        carrousel.style.transform = `translateX(${currentPosition + 250}px)`; // Ajuste o valor de 250px conforme necessário
     });
+});
 
-    // Exemplo de interatividade com o menu dropdown
-    function toggleDropdown() {
-        const dropdown = document.querySelector('.dropdown-content2');
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+document.querySelectorAll('.aror .next').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const carrousel = event.target.closest('.aror').previousElementSibling;
+        const items = carrousel.querySelectorAll('img');
+        const currentTransform = getComputedStyle(carrousel).transform;
+        let currentPosition = currentTransform === 'none' ? 0 : parseInt(currentTransform.split(',')[4]);
+
+        // Mover a imagem para a direita
+        carrousel.style.transform = `translateX(${currentPosition - 250}px)`; // Ajuste o valor de 250px conforme necessário
+    });
+});
+
+// Função para alternar o dropdown (menu de notificações)
+const dropdownBtns = document.querySelectorAll('.dropdown2 .dropbtn');
+dropdownBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle('show');
+    });
+});
+
+// Fechar o dropdown se o usuário clicar fora
+window.addEventListener('click', function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        document.querySelectorAll('.dropdown-content2').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
     }
+});
 
-    // Associando a função ao evento de clique no botão
-    document.querySelector('.dropbtn').addEventListener('click', toggleDropdown);
-
-    // Adicionar mais interações aqui conforme necessário
+// Adicionar uma classe 'show' para mostrar o conteúdo do dropdown
+// Pode adicionar o seguinte CSS para exibir o conteúdo ao clicar
+/*
+.show {
+    display: block;
+}
+*/
 </script>
