@@ -13,7 +13,7 @@ $this->title = 'Netflix Clone';
         transition: all 0.5s;
 
         /* background gradient blue top black bottom */
-        background: linear-gradient(to bottom, #141414, #000000);
+        background-image: linear-gradient(to bottom, #141414, #000000);
 
     }
 
