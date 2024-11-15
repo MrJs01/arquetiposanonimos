@@ -143,9 +143,9 @@ $comece_aqui = [
         <div class="swiper-wrapper">
             <?php foreach ($comece_aqui as $filme): // Criando 8 filmes por carrossel
             ?>
-                <div class="swiper-slide">
-                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px; height: 200px;">
-                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme" height="200" width="300" style="object-fit: cover;">
+                <div class="swiper-slide" style="width: auto;">
+                    <div class="card" onclick="location.href='<?= $filme['link'] ?>'" style="width: 300px; ">
+                        <img src="/file_contents/<?= $filme['img'] ?>" class="card-img-top" alt="Filme"  style="object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $filme['title'] ?> </h5>
                             <p class="card-text"><?= $filme['description'] ?></p>
@@ -159,14 +159,19 @@ $comece_aqui = [
     </div>
     <script>
         var swiper_destaques = new Swiper("#swiper-destaques", {
-            // Configuração para slides lado a lado automaticamente
-            slidesPerView: "auto",
-            spaceBetween: 15,
-            loop: true,
+            // Deixar slides lado a lado automaticamente
+            spaceBetween: 15, // Espaçamento entre os slides
+            loop: true, // Loop infinito
+
+            slidesPerView: 'auto', // Deixa os slides ajustarem o tamanho automaticamente
+
             navigation: {
-                nextEl: "#swiper-destaques .swiper-button-next",
-                prevEl: "#swiper-destaques .swiper-button-prev",
+                nextEl: $("#swiper-destaques").find(".swiper-button-next")[0],
+                prevEl: $("#swiper-destaques").find(".swiper-button-prev")[0],
             },
+
+            // Ajuste adicional para o alinhamento correto
+            centeredSlides: true, // Centraliza os slides se necessário
         });
     </script>
 
