@@ -156,31 +156,31 @@ $films = \app\models\Films::find()->all();
     const destaques = [{
             title: "Tipologia Psicológica de Carl Jung",
             description: "Uma plataforma dedicada ao estudo da Psicologia Analítica de Carl Jung, abordando arquétipos, tipologias psicológicas e filosofia com conteúdo multimodal (textos, áudios e vídeos).",
-            img: "https://placehold.co/1200x500/ff0000/ffffff", // Imagem ilustrativa do projeto
+            img: "/assets_main/img/wal3.jpeg", // Imagem ilustrativa do projeto
             bgColor: "#1c1c1c"
         },
         {
             title: "IA e Audiobooks",
             description: "Uso de IA para gerar audiobooks a partir de textos, permitindo uma experiência imersiva de aprendizagem e estudo da psicologia analítica.",
-            img: "https://placehold.co/1200x500/00ff00/ffffff", // Imagem representando IA ou áudio
+            img: "/assets_main/img/wal2.jpeg", // Imagem representando IA ou áudio
             bgColor: "#2b2b2b"
         },
         {
             title: "Conteúdo Interativo",
             description: "Conteúdos interativos como quizzes, fóruns de discussão e artigos multimídia para facilitar o aprendizado de psicologia e filosofia.",
-            img: "https://placehold.co/1200x500/0000ff/ffffff", // Imagem de conteúdo interativo
+            img: "/assets_main/img/wal1.jpeg", // Imagem de conteúdo interativo
             bgColor: "#3c3c3c"
         },
         {
             title: "Monetização e Acesso Exclusivo",
             description: "Apoio ao projeto por meio de anúncios e planos de membros, oferecendo acesso a conteúdo exclusivo, audiobooks e materiais de estudo.",
-            img: "https://placehold.co/1200x500/ff9900/ffffff", // Imagem de monetização ou acesso premium
+            img: "/assets_main/img/wal4.jpeg", // Imagem representando monetização
             bgColor: "#4a4a4a"
         },
         {
             title: "Organização de Estudo",
             description: "Conteúdos organizados em categorias de estudo como 'Arquétipos', 'Tipologias', 'Filosofia', para uma navegação eficiente e aprendizado personalizado.",
-            img: "https://placehold.co/1200x500/6600ff/ffffff", // Imagem representando organização de estudo
+            img: "/assets_main/img/wal5.jpeg", // Imagem representando organização
             bgColor: "#5c5c5c"
         }
     ];
@@ -204,6 +204,6 @@ $films = \app\models\Films::find()->all();
     }
 
     setInterval(updateHighlight, 3000); // Troca a cada 3 segundos
-
+    updateHighlight()
     // Configuração do Swiper para cada carrossel menor
 </script>
