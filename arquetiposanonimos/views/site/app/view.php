@@ -2,9 +2,16 @@
 
 // pegar imagens do arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/0001.jpg, 0022.jpg, 0033.jpg
 
-echo $file_name;
+echo $file_name; // boas-vindas_comece-aqui
 
-$dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
+$file_name = str_replace('_', '/', $file_name);
+// verificar se termina com /
+if (substr($file_name, -1) !== '/') {
+    $file_name .= '/';
+}
+
+// $dir = \Yii::getAlias('@app') . '/web/file_contents/boas-vindas/comece-aqui/';
+$dir = \Yii::getAlias('@app') . '/web/file_contents/' . $file_name;
 $files = scandir($dir);
 $files = array_splice($files, 2);
 
