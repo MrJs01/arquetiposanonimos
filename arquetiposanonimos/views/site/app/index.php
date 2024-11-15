@@ -75,6 +75,30 @@
                 <div class="orange">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
                 </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
+                <div class="orange">
+                    <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/orange%20is%20the%20new.jpg?raw=true" alt="Orange is the New Black">
+                </div>
                 <!-- Mais filmes... -->
             </div>
         </div>
