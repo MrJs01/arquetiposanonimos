@@ -4,6 +4,8 @@
 
 $this->title = 'Netflix Clone';
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Estilos adicionais para personalizar o layout -->
 <style>
@@ -171,8 +173,6 @@ $comece_aqui = [
 </div>
 
 <!-- Swiper.js e configuração -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <script>
     // Array de filmes em destaque
