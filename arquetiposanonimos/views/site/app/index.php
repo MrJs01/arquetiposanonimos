@@ -102,6 +102,10 @@ $this->title = 'Netflix Clone';
     </div>
 </div>
 
+<?php
+$comece_aqui = [];
+?>
+
 
 <!-- Três Swipers Menores -->
 <div class="container-fluid">
