@@ -89,7 +89,6 @@
     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/user.png?raw=true" alt="">
     <span class="span-icon"></span>
 </div>
-</div>
 
 <!-- image and logo -->
 <div class="between-img-div">
