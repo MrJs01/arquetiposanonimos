@@ -90,13 +90,11 @@ $this->title = 'Netflix Clone';
 </style>
 
 <!-- Carrossel Principal (Destaque) -->
-<div class="">
-    <div class="highlight-card">
-        <img id="highlight-img" src="https://placehold.co/1200x500" alt="Destaque">
-        <div class="highlight-content">
-            <h2 id="highlight-title" class="highlight-title">Título do Destaque</h2>
-            <p id="highlight-description" class="highlight-description">Descrição do filme ou série em destaque.</p>
-        </div>
+<div class="highlight-card">
+    <img id="highlight-img" src="https://placehold.co/1200x500" alt="Destaque">
+    <div class="highlight-content">
+        <h2 id="highlight-title" class="highlight-title">Título do Destaque</h2>
+        <p id="highlight-description" class="highlight-description">Descrição do filme ou série em destaque.</p>
     </div>
 </div>
 

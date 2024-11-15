@@ -68,7 +68,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         </ul>
     </nav>
 
-    <div class="container-fluid mt-4">
+    <div class="">
         <?php if (!empty($this->params['breadcrumbs'])): ?>
             <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
         <?php endif ?>
