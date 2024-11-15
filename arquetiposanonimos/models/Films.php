@@ -70,21 +70,25 @@ class Films extends \yii\db\ActiveRecord
 
     public function saveFiles($imageInput, $filesInput)
     {
-        // salvar em /web/uploads
-        if ($imageInput) {
-            $image = UploadedFile::getInstance($this, 'imgInput');
-            if ($image) {
+        // salvar em /web/uploads e verificar erros
+        try {
+            if ($imageInput) {
+                $image = UploadedFile::getInstance($this, 'imgInput');
                 $image->saveAs('uploads/' . $image->baseName . '.' . $image->extension);
-                $this->img = $image->baseName . '.' . $image->extension;
+                $this->img = 'uploads/' . $image->baseName . '.' . $image->extension;
             }
-        }
 
-        if ($filesInput) {
-            $files = UploadedFile::getInstances($this, 'filesInput');
-            foreach ($files as $file) {
-                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
-                $this->files .= $file->baseName . '.' . $file->extension . ',';
+            if ($filesInput) {
+                $files = UploadedFile::getInstances($this, 'filesInput');
+                foreach ($files as $file) {
+                    $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+                    $this->files .= 'uploads/' . $file->baseName . '.' . $file->extension . ',';
+                }
             }
+
+            return true;
+        } catch (\Exception $e) {
+            return false;
         }
     }
 }
