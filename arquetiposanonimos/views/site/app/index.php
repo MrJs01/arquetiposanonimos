@@ -11,7 +11,7 @@
 <div class="logo-and-text">
     <div class="titleWrapper">
         <div class="billboard-title">
-            <h1 class="title-logo">Orange is the New Black</h1>
+            <img class="title-logo" src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/netflixsvg.webp" alt="Netflix logo">
         </div>
     </div>
 
