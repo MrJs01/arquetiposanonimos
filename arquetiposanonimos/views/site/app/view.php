@@ -2,7 +2,7 @@
 
 // pegar imagens do arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/0001.jpg, 0022.jpg, 0033.jpg
 
-$dir = '/file_contents/boas-vindas/comece-aqui/';
+$dir = \Yii::getAlias('@app') . '/file_contents/boas-vindas/comece-aqui/';
 $files = scandir($dir);
 $files = array_splice($files, 2);
 
