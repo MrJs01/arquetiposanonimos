@@ -71,7 +71,7 @@
 
 <!-- Contato -->
 <section class="contact-section bg-black" id="contato">
-    <div class="container px-4 px-lg-5" style="background-color: #343a40;">
+    <div class="container px-4 px-lg-5 p-3 rounded" style="background-color: white;">
    
         <!-- Redes sociais -->
         <div class="social d-flex justify-content-center rounded">
