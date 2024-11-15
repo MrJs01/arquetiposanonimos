@@ -12,7 +12,7 @@
 
 <!-- Sobre -->
 <section class="about-section text-center w-100" id="about">
-    <div class="container row gx-4 gx-lg-5 justify-content-center w-100">
+    <div class="container row justify-content-center w-100">
         <h2 class="text-white mb-4">Sobre o Projeto</h2>
         <p class="text-white-50">
             Arquétipos Anônimos é uma plataforma que reúne informações sobre tipologias, filosofia e psicologia analítica. Criado para armazenar e compartilhar conhecimentos sobre os arquétipos e o inconsciente coletivo.
