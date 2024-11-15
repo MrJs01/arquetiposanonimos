@@ -95,8 +95,9 @@ class SiteController extends Controller
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
 
-            $imageInput = Yii::$app->request->files['imageInput'];
-            $filesInput = Yii::$app->request->files['filesInput'];
+            // files imageInput e filesInput
+            $imageInput = UploadedFile::getInstance($model, 'imageInput');
+            $filesInput = UploadedFile::getInstances($model, 'filesInput');
     
             // Verifica se foi enviado uma imagem principal
             if ($imageInput) {
