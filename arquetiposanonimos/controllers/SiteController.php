@@ -96,33 +96,58 @@ class SiteController extends Controller
             // Recupera a nova ordem das imagens
             $newOrder = Yii::$app->request->post('newOrder', '');
             if ($newOrder) {
-                // Atualiza a ordem das imagens no campo 'files'
                 $model->files = $newOrder;
             }
 
             // Recupera as imagens excluídas
             $deletedImages = Yii::$app->request->post('deletedImages', '');
             if ($deletedImages) {
-                // Remove as imagens excluídas da lista
                 $deletedImages = explode(',', $deletedImages);
                 foreach ($deletedImages as $deletedImage) {
                     if (!empty($deletedImage)) {
-                        // Aqui você pode implementar o código para excluir o arquivo fisicamente
+                        // Exclui a imagem física
                         @unlink(Yii::getAlias('@webroot') . '/' . $deletedImage);
                     }
                 }
             }
 
-            // Verifica se a imagem principal foi enviada corretamente
+            // Verifica e salva a imagem principal
             $imageInput = isset($_FILES['Films']['name']['imgInput']) && $_FILES['Films']['error']['imgInput'] == UPLOAD_ERR_OK
                 ? $_FILES['Films']['tmp_name']['imgInput'] : null;
 
-            // Verifica se os arquivos adicionais foram enviados corretamente
+            // Verifica e salva os arquivos adicionais
             $filesInput = isset($_FILES['Films']['name']['filesInput']) && $_FILES['Films']['error']['filesInput'][0] == UPLOAD_ERR_OK
                 ? $_FILES['Films']['tmp_name']['filesInput'] : [];
 
-            // Salva os arquivos se foram enviados
-            if ($model->saveFiles($imageInput, $filesInput) && $model->save()) {
+            // Salva as imagens
+            if ($imageInput || $filesInput) {
+                if ($imageInput) {
+                    // Salva a imagem principal
+                    $imagePath = 'uploads/' . uniqid() . '.' . pathinfo($_FILES['Films']['name']['imgInput'], PATHINFO_EXTENSION);
+                    if (!move_uploaded_file($imageInput, Yii::getAlias('@webroot') . '/' . $imagePath)) {
+                        return false; // Se falhar ao mover a imagem principal
+                    }
+                    $model->img = $imagePath;
+                }
+
+                // Processa as imagens adicionais
+                if ($filesInput) {
+                    $filePaths = [];
+                    foreach ($filesInput as $file) {
+                        $filePath = 'uploads/' . uniqid() . '.' . pathinfo($file, PATHINFO_EXTENSION);
+                        if (move_uploaded_file($file, Yii::getAlias('@webroot') . '/' . $filePath)) {
+                            $filePaths[] = $filePath;
+                        } else {
+                            return false; // Se falhar ao mover algum arquivo adicional
+                        }
+                    }
+                    // Atualiza o campo `files` com a nova lista de imagens
+                    $model->files = implode(',', $filePaths);
+                }
+            }
+
+            // Tenta salvar o modelo
+            if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {
