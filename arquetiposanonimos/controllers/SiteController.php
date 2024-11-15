@@ -103,7 +103,7 @@ class SiteController extends Controller
 
     
             // Tenta fazer o upload dos arquivos
-            if ($model->uploadFiles() && $model->save()) {
+            if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Film saved successfully!');
                 return $this->redirect(['app/admin/film', 'id' => $model->id]);
             } else {
