@@ -51,8 +51,8 @@ $config = [
                 //https://arquetiposanonimos.crom.live/app/view/boas-vindas_comece-aqui
                 '/app/view/<file_name>' => 'site/view',
 
-                '/app/admin/film-create' => 'site/admin-film',
-                '/app/admin/film-edit/<id>' => 'site/admin-film',
+                '/app/admin/film' => 'site/admin-film',
+                '/app/admin/film/<id>' => 'site/admin-film',
             ],
         ],
     ],
