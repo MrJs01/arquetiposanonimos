@@ -1,16 +1,24 @@
+<?php
+
+// pegar imagens do arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/0001.jpg, 0022.jpg, 0033.jpg
+
+$dir = 'arquetiposanonimos/web/file_contents/boas-vindas/comece-aqui/';
+$files = scandir($dir);
+$files = array_splice($files, 2);
+
+
+?>
+
+
 <!-- swiper slide -->
 <div class="p-0">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://placehold.co/1200x500" alt="Slide 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://placehold.co/1200x500" alt="Slide 2">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://placehold.co/1200x500" alt="Slide 3">
-            </div>
+            <?php foreach ($files as $file): ?>
+                <div class="swiper-slide">
+                    <img src="/file_contents/boas-vindas/comece-aqui/<?= $file ?>" alt="<?= $file ?>">
+                </div>
+            <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
     </div>
