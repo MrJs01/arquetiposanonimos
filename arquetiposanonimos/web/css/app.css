@@ -306,6 +306,7 @@ width: 95px;
     cursor: pointer;
     overflow-x: auto;
     margin-top: -45px;
+    margin-left: 40px;
 }
 .all-movie-div{
     display: flex;

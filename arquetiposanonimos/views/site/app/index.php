@@ -158,5 +158,4 @@
     document.querySelectorAll('.div-width').forEach(div => {
         div.scrollLeft = 0;
     });
-    
 </script>
