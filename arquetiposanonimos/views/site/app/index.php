@@ -96,8 +96,6 @@ $this->title = 'Netflix Clone';
         <div class="highlight-content">
             <h2 id="highlight-title" class="highlight-title">Título do Destaque</h2>
             <p id="highlight-description" class="highlight-description">Descrição do filme ou série em destaque.</p>
-            <button class="btn btn-danger btn-highlight">Assistir</button>
-            <button class="btn btn-secondary btn-highlight">Trailer</button>
         </div>
     </div>
 </div>
@@ -111,7 +109,7 @@ $films = \app\models\Films::find()->all();
 
 <!-- Três Swipers Menores -->
 <div class="container-fluid">
-    <h2 class="text-white m-5">Filmes em Destaque</h2>
+    <h2 class="text-white m-5">Destaque</h2>
     <div class="swiper mySwiper" id="swiper-destaques">
         <div class="swiper-wrapper">
             <?php foreach ($films as $film): // Criando 8 filmes por carrossel 
@@ -155,25 +153,38 @@ $films = \app\models\Films::find()->all();
 
 <script>
     // Array de filmes em destaque
-    const destaques = [{
-            title: "Filme Destaque 1",
-            description: "Descrição do filme destaque 1. Uma aventura épica e emocionante.",
-            img: "https://placehold.co/1200x500/ff0000/ffffff",
+    const informacoesProjeto = [{
+            title: "Tipologia Psicológica de Carl Jung",
+            description: "Uma plataforma dedicada ao estudo da Psicologia Analítica de Carl Jung, abordando arquétipos, tipologias psicológicas e filosofia com conteúdo multimodal (textos, áudios e vídeos).",
+            img: "https://placehold.co/1200x500/ff0000/ffffff", // Imagem ilustrativa do projeto
             bgColor: "#1c1c1c"
         },
         {
-            title: "Filme Destaque 2",
-            description: "Descrição do filme destaque 2. Suspense e drama intensos.",
-            img: "https://placehold.co/1200x500/00ff00/ffffff",
+            title: "IA e Audiobooks",
+            description: "Uso de IA para gerar audiobooks a partir de textos, permitindo uma experiência imersiva de aprendizagem e estudo da psicologia analítica.",
+            img: "https://placehold.co/1200x500/00ff00/ffffff", // Imagem representando IA ou áudio
             bgColor: "#2b2b2b"
         },
         {
-            title: "Filme Destaque 3",
-            description: "Descrição do filme destaque 3. Comédia para toda a família.",
-            img: "https://placehold.co/1200x500/0000ff/ffffff",
+            title: "Conteúdo Interativo",
+            description: "Conteúdos interativos como quizzes, fóruns de discussão e artigos multimídia para facilitar o aprendizado de psicologia e filosofia.",
+            img: "https://placehold.co/1200x500/0000ff/ffffff", // Imagem de conteúdo interativo
             bgColor: "#3c3c3c"
+        },
+        {
+            title: "Monetização e Acesso Exclusivo",
+            description: "Apoio ao projeto por meio de anúncios e planos de membros, oferecendo acesso a conteúdo exclusivo, audiobooks e materiais de estudo.",
+            img: "https://placehold.co/1200x500/ff9900/ffffff", // Imagem de monetização ou acesso premium
+            bgColor: "#4a4a4a"
+        },
+        {
+            title: "Organização de Estudo",
+            description: "Conteúdos organizados em categorias de estudo como 'Arquétipos', 'Tipologias', 'Filosofia', para uma navegação eficiente e aprendizado personalizado.",
+            img: "https://placehold.co/1200x500/6600ff/ffffff", // Imagem representando organização de estudo
+            bgColor: "#5c5c5c"
         }
     ];
+
 
     // Configuração do carrossel principal
     let currentHighlight = 0;
