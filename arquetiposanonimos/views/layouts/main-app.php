@@ -22,13 +22,28 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <style>
-        body { background-color: #141414; color: #fff; }
-        .navbar { background-color: #181818; }
-        .card { background-color: #222; border: none; }
-        .swiper-slide { display: flex; justify-content: center; align-items: center; }
+        body {
+            background-color: #141414;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #181818;
+        }
+
+        .card {
+            background-color: #222;
+            border: none;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -62,5 +77,6 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
+
 </html>
 <?php $this->endPage() ?>
