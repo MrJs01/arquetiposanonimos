@@ -19,28 +19,13 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <head>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- SwiperJS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <!-- Custom CSS -->
     <style>
-        body {
-            background-color: #141414;
-            color: #fff;
-        }
-        .navbar {
-            background-color: #181818;
-        }
-        .card {
-            background-color: #222;
-            border: none;
-        }
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        body { background-color: #141414; color: #fff; }
+        .navbar { background-color: #181818; }
+        .card { background-color: #222; border: none; }
+        .swiper-slide { display: flex; justify-content: center; align-items: center; }
     </style>
 </head>
 
@@ -64,7 +49,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <div class="container-fluid mt-4">
         <?= $content ?>
     </div>
 
@@ -72,11 +57,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         <p>&copy; <?= date('Y') ?> Netflix Clone. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SwiperJS JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>
-<?php $this->endBody() ?>
 <?php $this->endPage() ?>

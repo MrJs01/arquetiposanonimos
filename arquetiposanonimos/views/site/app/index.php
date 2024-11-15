@@ -5,9 +5,65 @@
 $this->title = 'Netflix Clone';
 ?>
 
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Mother">
+            <div class="card-body">
+                <h5 class="card-title">The Mother</h5>
+                <p class="card-text">Coming to Netflix May 12</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Black Dust">
+            <div class="card-body">
+                <h5 class="card-title">Black Dust</h5>
+                <p class="card-text">Now streaming on Netflix</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Fox">
+            <div class="card-body">
+                <h5 class="card-title">The Fox</h5>
+                <p class="card-text">Watch now on Netflix</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="The Perfection">
+            <div class="card-body">
+                <h5 class="card-title">The Perfection</h5>
+                <p class="card-text">Now streaming on Netflix</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Extraction">
+            <div class="card-body">
+                <h5 class="card-title">Extraction</h5>
+                <p class="card-text">Watch now on Netflix</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Jagame Thandhiram">
+            <div class="card-body">
+                <h5 class="card-title">Jagame Thandhiram</h5>
+                <p class="card-text">Now streaming on Netflix</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        <!-- Card 1 -->
         <div class="swiper-slide">
             <div class="card" style="width: 18rem;">
                 <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Movie">
@@ -17,7 +73,6 @@ $this->title = 'Netflix Clone';
                 </div>
             </div>
         </div>
-        <!-- Card 2 -->
         <div class="swiper-slide">
             <div class="card" style="width: 18rem;">
                 <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Movie">
@@ -27,16 +82,13 @@ $this->title = 'Netflix Clone';
                 </div>
             </div>
         </div>
-        <!-- Add more slides/cards as needed -->
+        <!-- Add more slides as needed -->
     </div>
-    <!-- Swiper Pagination -->
     <div class="swiper-pagination"></div>
-    <!-- Swiper Navigation -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
 </div>
 
-<!-- SwiperJS Initialization -->
 <script>
     const swiper = new Swiper('.mySwiper', {
         slidesPerView: 3,
