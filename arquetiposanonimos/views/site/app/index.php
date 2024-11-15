@@ -240,7 +240,6 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="aror">
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
@@ -285,7 +284,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="top10-now" id="top-tv">
         <h2 class="top10-tvd-h2">Top 10 In Nigeria</h2>
@@ -354,7 +352,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="aror">
         <a class="prev">&#10094;</a>
