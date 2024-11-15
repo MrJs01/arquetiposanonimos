@@ -72,32 +72,9 @@
 <!-- Contato -->
 <section class="contact-section bg-black" id="contato">
     <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 w-100 justify-content-center">
-            <!-- Email -->
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-envelope text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Email</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50"><a href="mailto:contato@arquetiposanonimos.com">contato@arquetiposanonimos.com</a></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Telefone -->
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Telefone</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">+55 (99) 1234-5678</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
         <!-- Redes sociais -->
-        <div class="social d-flex justify-content-center">
+        <div class="social d-flex justify-content-center rounded" style="background-color: white;">
             <a class="mx-2" href="https://www.instagram.com/arquetiposanonimos/"><i class="fab fa-instagram"></i></a>
             <a class="mx-2" href="https://www.youtube.com/@Arqu%C3%A9tiposAn%C3%B4nimos"><i class="fab fa-youtube"></i></a>
         </div>
