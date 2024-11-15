@@ -41,46 +41,13 @@ class Films extends \yii\db\ActiveRecord
             [['title', 'description', 'slug', 'views'], 'required'],
             [['title', 'description', 'slug'], 'string'],
             [['views'], 'integer'],
+            [['files', 'img'], 'string'],
 
-            // Validações para os uploads de arquivos
-            [['filesInput'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, gif', 'maxFiles' => 10],
-            [['imgInput'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg, jpeg'], // A imagem principal será obrigatória
         ];
     }
 
 
 
-    /**
-     * Salva os arquivos de imagem enviados.
-     */
-    public function uploadFiles()
-    {
-        if ($this->validate()) {
-            // Para a imagem principal
-            if ($this->imgInput) {
-                $imgPath = \Yii::getAlias('@webroot') . '/uploads/films/' . uniqid() . '.' . $this->imgInput->extension;
-                if ($this->imgInput->saveAs($imgPath)) {
-                    $this->img = $imgPath; // Salva o caminho da imagem principal
-                }
-            }
-
-            // Para os arquivos de imagem múltiplos
-            if ($this->filesInput) {
-                $filePaths = [];
-                foreach ($this->filesInput as $file) {
-                    $filePath = \Yii::getAlias('@webroot') . '/uploads/films/' . uniqid() . '.' . $file->extension;
-                    if ($file->saveAs($filePath)) {
-                        $filePaths[] = $filePath;
-                    }
-                }
-                $this->files = implode(',', $filePaths); // Salva os caminhos dos arquivos
-            }
-
-            return true;
-        }
-
-        return false;
-    }
 
     /**
      * {@inheritdoc}

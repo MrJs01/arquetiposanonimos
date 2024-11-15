@@ -94,9 +94,15 @@ class SiteController extends Controller
     
         // Verifica se é um POST request
         if ($model->load(Yii::$app->request->post())) {
-            // Recebe os arquivos de imagem
-            $model->filesInput = UploadedFile::getInstances($model, 'filesInput');
-            $model->imgInput = UploadedFile::getInstance($model, 'imgInput');
+
+            if ($model->isNewRecord) {
+                $model->created_at = date('Y-m-d H:i:s');
+            }
+
+            // verificar img principal
+            $model->img = UploadedFile::getInstance($model, 'imgInput');
+            $model->files = UploadedFile::getInstances($model, 'filesInput');
+
     
             // Tenta fazer o upload dos arquivos
             if ($model->uploadFiles() && $model->save()) {
