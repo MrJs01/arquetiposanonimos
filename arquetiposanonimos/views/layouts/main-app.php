@@ -50,7 +50,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 </head>
 
 <body>
-  
+
 
 
     <?php $this->beginBody() ?>
@@ -67,7 +67,12 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     </nav>
 
     <div class="container-fluid mt-4">
+        <?php if (!empty($this->params['breadcrumbs'])): ?>
+            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+        <?php endif ?>
+        <?= Alert::widget() ?>
         <?= $content ?>
+
     </div>
 
     <footer class="text-center mt-5 py-4">
