@@ -101,12 +101,15 @@ class SiteController extends Controller
     
             // Verifica se foi enviado uma imagem principal
             if ($imageInput) {
-                $model->img = $imageInput->name;
+                $model->img = $imageInput->baseName . '.' . $imageInput->extension;
             }
     
             // Verifica se foram enviados arquivos de imagem
             if ($filesInput) {
-                $model->files = json_encode($filesInput);
+                $model->files = [];
+                foreach ($filesInput as $file) {
+                    $model->files[] = $file->baseName . '.' . $file->extension;
+                }
             }
 
     
