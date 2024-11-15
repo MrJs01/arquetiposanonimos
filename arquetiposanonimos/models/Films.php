@@ -76,8 +76,10 @@ class Films extends \yii\db\ActiveRecord
             if ($imageInput && isset($imageInput['tmp_name']) && $imageInput['tmp_name']) {
                 $image = UploadedFile::getInstanceByName('imageInput'); // Usando 'imageInput' diretamente
                 if ($image && $image->tempName) {
-                    $image->saveAs('uploads/' . $image->baseName . '.' . $image->extension);
-                    $this->img = 'uploads/' . $image->baseName . '.' . $image->extension;
+                    // Gerar um nome único e aleatório para a imagem
+                    $uniqueName = uniqid('img_', true) . '.' . $image->extension;
+                    $image->saveAs('uploads/' . $uniqueName);
+                    $this->img = 'uploads/' . $uniqueName;
                 } else {
                     throw new \Exception("Erro ao carregar a imagem principal.");
                 }
@@ -88,8 +90,10 @@ class Films extends \yii\db\ActiveRecord
                 $files = UploadedFile::getInstancesByName('filesInput'); // Usando 'filesInput' diretamente
                 foreach ($files as $file) {
                     if ($file && $file->tempName) {
-                        $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
-                        $this->files .= 'uploads/' . $file->baseName . '.' . $file->extension . ',';
+                        // Gerar um nome único e aleatório para cada arquivo
+                        $uniqueName = uniqid('file_', true) . '.' . $file->extension;
+                        $file->saveAs('uploads/' . $uniqueName);
+                        $this->files .= 'uploads/' . $uniqueName . ',';
                     } else {
                         throw new \Exception("Erro ao carregar um dos arquivos.");
                     }
