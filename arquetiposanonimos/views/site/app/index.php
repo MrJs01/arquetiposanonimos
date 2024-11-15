@@ -97,6 +97,7 @@
             <div class="second-all-movie-div" id="div2-width">
                 <div class="control-z">
                     <img src="https://github.com/Chinemereem/Netflix-clone/blob/master/images/controlz.jpg?raw=true" alt="contro z">
+                    
                 </div>
                 <div class="crazy-rich-asians">
                     <img src="https://raw.githubusercontent.com/Chinemereem/Netflix-clone/master/images/crazy%20rich%20asian.webp" alt="crazy-rich-asians">
