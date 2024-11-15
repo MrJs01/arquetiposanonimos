@@ -54,7 +54,7 @@
         </div>
         <!-- Projeto 2 -->
         <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal1.png" alt="Imagem de Filosofia" /></div>
+            <div class="col-lg-6"><img class="img-fluid" src="/assets_main/img/wal6.jpeg" alt="Imagem de Filosofia" /></div>
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
