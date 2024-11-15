@@ -65,6 +65,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="/app">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Site</a></li>
 
             </ul>
         </div>
@@ -80,7 +81,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     </div>
 
     <footer class="text-center mt-5 py-4">
-        <p>&copy; <?= date('Y') ?> @Arquetipos Anónimos by <a href="https://crom.live">Crom</a></p>
+        <p>&copy; <?= date('Y') ?> @TipologiasPsicológicas by <a href="https://crom.live">Crom</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

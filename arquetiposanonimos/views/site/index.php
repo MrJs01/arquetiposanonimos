@@ -4,7 +4,8 @@
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Tipologias Psicológicas</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">A Psicologia Analítica de Carl Jung com recursos interativos, narrativos e audiobooks gerados por IA.</h2>
-                <a class="btn btn-primary" href="#about">Começar</a>
+                <a class="btn btn-primary" href="#about">Conhecer</a>
+                <a class="btn btn-primary" href="/app">App</a>
             </div>
         </div>
     </div>
