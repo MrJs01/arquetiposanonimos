@@ -159,17 +159,14 @@ $comece_aqui = [
     </div>
     <script>
         var swiper_destaques = new Swiper("#swiper-destaques", {
-            // deixar slides lado a lado automaticamente
+            // Configuração para slides lado a lado automaticamente
             slidesPerView: "auto",
             spaceBetween: 15,
-
             loop: true,
             navigation: {
-                nextEl: $("#swiper-destaques").find(".swiper-button-next")[0],
-                prevEl: $("#swiper-destaques").find(".swiper-button-prev")[0],
+                nextEl: "#swiper-destaques .swiper-button-next",
+                prevEl: "#swiper-destaques .swiper-button-prev",
             },
-            
-       
         });
     </script>
 
