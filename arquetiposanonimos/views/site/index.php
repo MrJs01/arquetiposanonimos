@@ -99,5 +99,23 @@
             <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
             <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
         </div>
+        <!-- Links dos grupos -->
+        <div class="row gx-4 gx-lg-5 w-100 justify-content-center mt-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-comments text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Grupos</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">
+                            <p><a href="https://chat.whatsapp.com/IX0Vbu0eoEu03bRHAkAwDR" target="_blank">Grupo Arquitetos Tipológicos</a></p>
+                            <p><a href="https://chat.whatsapp.com/Fx8yAbBQ8JtEqrg3wUb7Jq" target="_blank">Grupo principal A.A</a></p>
+                            <p><a href="https://drive.google.com/drive/folders/1-HSGRwpwUP5HtukVGuB7tUNUVVXQUWC9" target="_blank">Drive de Materiais</a></p>
+                            <p><a href="https://meet.google.com/bob-ijxu-kpv" target="_blank">Reunião A.A - Sábado às 20h30</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
