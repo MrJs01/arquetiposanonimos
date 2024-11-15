@@ -69,26 +69,6 @@
     </div>
 </section>
 
-<!-- Inscrição -->
-<section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Inscreva-se para receber atualizações!</h2>
-                <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row input-group-newsletter">
-                        <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Digite seu email..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Enviar</button></div>
-                    </div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">O email é obrigatório.</div>
-                    <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email inválido.</div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Contato -->
 <section class="contact-section bg-black">
     <div class="container px-4 px-lg-5">
