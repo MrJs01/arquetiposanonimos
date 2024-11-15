@@ -164,20 +164,7 @@ $comece_aqui = [
                 nextEl: $("#swiper-destaques").querySelector('.swiper-button-next'),
                 prevEl: $("#swiper-destaques").querySelector('.swiper-button-prev'),
             },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1440: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                }
-            }
+       
         });
     </script>
 
